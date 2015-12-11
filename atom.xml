@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zobor.me//"/>
-  <updated>2015-12-09T11:23:01.000Z</updated>
+  <updated>2015-12-11T02:11:54.000Z</updated>
   <id>http://zobor.me//</id>
   
   <author>
@@ -14,6 +14,19 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[test]]></title>
+    <link href="http://zobor.me/2015/12/11/test/"/>
+    <id>http://zobor.me/2015/12/11/test/</id>
+    <published>2015-12-11T02:11:54.000Z</published>
+    <updated>2015-12-11T02:11:54.000Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[web终端对html5 video的支持统计]]></title>
