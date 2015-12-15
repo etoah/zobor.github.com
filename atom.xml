@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zobor.me//"/>
-  <updated>2015-12-14T12:32:47.000Z</updated>
+  <updated>2015-12-14T12:33:15.000Z</updated>
   <id>http://zobor.me//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://zobor.me/2015/12/14/web%E8%AE%BE%E5%A4%87UA%E7%BB%9F%E8%AE%A1/"/>
     <id>http://zobor.me/2015/12/14/web设备UA统计/</id>
     <published>2015-12-14T11:20:51.000Z</published>
-    <updated>2015-12-14T12:32:47.000Z</updated>
+    <updated>2015-12-14T12:33:15.000Z</updated>
     <content type="html"><![CDATA[<h2 id="ipad"><a href="#ipad" class="headerlink" title="ipad"></a>ipad</h2><p><code>platform=iPad</code></p>
 <ul>
 <li>[chrome] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13A344 Safari/601.1.46 (000445)</li>
