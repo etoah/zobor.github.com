@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zobor.me//"/>
-  <updated>2015-12-15T12:38:06.000Z</updated>
+  <updated>2015-12-18T01:24:38.000Z</updated>
   <id>http://zobor.me//</id>
   
   <author>
@@ -16,11 +16,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[说说safari的video onprogress]]></title>
+    <link href="http://zobor.me/2015/12/17/%E8%AF%B4%E8%AF%B4safari%E7%9A%84onprogress/"/>
+    <id>http://zobor.me/2015/12/17/说说safari的onprogress/</id>
+    <published>2015-12-17T13:51:55.000Z</published>
+    <updated>2015-12-18T01:24:38.000Z</updated>
+    <content type="html"><![CDATA[<p>Mac: 10.10.3<br>Safari: 8.0.5<br>video format: mp4</p>
+<hr>
+<p>youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧。<br>测试发现，safari的onprogress比较鸡肋，根本不是标准的。只有视频全部cache完才会触发，靠onprogress来设计控制栏已经不能简单兼容多浏览器了。</p>
+<p>同属webkit，safari，你不羞耻吗？<br>官方的文档里的demo，视频还没发播（Http/1.1 Service Unavailable），这么大的厂，不忍直视。。。<br>其实，没有progress，我们可以用timeupdate + setInterval，切记做好性能优化。其实也是可以实现的。</p>
+<h3 id="u53C2_u8003_u6587_u6863"><a href="#u53C2_u8003_u6587_u6863" class="headerlink" title="参考文档"></a>参考文档</h3><ul>
+<li><a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/ControllingMediaWithJavaScript/ControllingMediaWithJavaScript.html#//apple_ref/doc/uid/TP40009523-CH3-SW4" target="_blank" rel="external">Safari HTML5 Audio and Video Guide</a></li>
+</ul>
+<h3 id="u5EF6_u4F38_u9605_u8BFB"><a href="#u5EF6_u4F38_u9605_u8BFB" class="headerlink" title="延伸阅读"></a>延伸阅读</h3><ul>
+<li><a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009523" target="_blank" rel="external">About HTML5 Audio and Video</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Mac: 10.10.3<br>Safari: 8.0.5<br>video format: mp4</p>
+<hr>
+<p>youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧。<br>测试发现]]>
+    </summary>
+    
+      <category term="html5" scheme="http://zobor.me/tags/html5/"/>
+    
+      <category term="mac" scheme="http://zobor.me/tags/mac/"/>
+    
+      <category term="safari" scheme="http://zobor.me/tags/safari/"/>
+    
+      <category term="video" scheme="http://zobor.me/tags/video/"/>
+    
+      <category term="前端开发" scheme="http://zobor.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[web设备UA统计]]></title>
     <link href="http://zobor.me/2015/12/14/web%E8%AE%BE%E5%A4%87UA%E7%BB%9F%E8%AE%A1/"/>
     <id>http://zobor.me/2015/12/14/web设备UA统计/</id>
     <published>2015-12-14T11:20:51.000Z</published>
-    <updated>2015-12-15T12:38:06.000Z</updated>
+    <updated>2015-12-16T01:47:04.000Z</updated>
     <content type="html"><![CDATA[<h2 id="ipad"><a href="#ipad" class="headerlink" title="ipad"></a>ipad</h2><p><code>platform=iPad</code></p>
 <ul>
 <li>[chrome] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13A344 Safari/601.1.46 (000445)</li>
@@ -75,6 +110,9 @@
 <h2 id="u575A_u679C_u624B_u673A"><a href="#u575A_u679C_u624B_u673A" class="headerlink" title="坚果手机"></a>坚果手机</h2><ul>
 <li>[Default] Mozilla/5.0 (Linux; Android 4.4.4; YQ601 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.102 Mobile Safari/537.36</li>
 <li>[wechat] Mozilla/5.0 (Linux; Android 4.4.4; YQ601 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 MicroMessenger/6.1.0.57_r1048261.540 NetType/WIFI</li>
+</ul>
+<h2 id="google_Nexus_5"><a href="#google_Nexus_5" class="headerlink" title="google Nexus 5"></a>google Nexus 5</h2><ul>
+<li>[wechat] Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn; Nexus 5 Build/LMY48I) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 MicroMessenger/6.3.8.50_r251a77a.680 NetType/WIFI Language/zh_CN</li>
 </ul>
 ]]></content>
     <summary type="html">

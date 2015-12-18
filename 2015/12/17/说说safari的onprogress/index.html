@@ -33,7 +33,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="html5,video," />
+  <meta name="keywords" content="html5,mac,safari,video," />
 
 
 
@@ -51,205 +51,25 @@
 
 
 
-<meta name="description" content="支持autoplay
+<meta name="description" content="Mac: 10.10.3Safari: 8.0.5video format: mp4
 
-
-设备
-微信
-手Q
-Mobile Chrome
-Mobile Safari
-自带浏览器
-
-
-
-
-iphone4
--
--
--
--
--
-
-
-iphone5s
-true
-true
--
--
--
-
-
-iphone6
-true
-true
--
--
--
-
-
-ipad
-true
-－
--
--
--
-
-
-华为Mate7
--
--
--
--
-true
-
-
-华为P6
--
--
--
--
--
-
-
-小米2
--
--">
+youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧。测试发现，safari的onprogress比较鸡肋，根本不是标准的。只有视频全部cache完才会触发，靠onprogress来设计控制栏已经不能简单兼容多浏览器了。
+同属webk">
 <meta property="og:type" content="article">
-<meta property="og:title" content="web终端对html5 video的支持统计">
-<meta property="og:url" content="http://zobor.me/2015/10/03/web终端对html5-video的支持统计/index.html">
+<meta property="og:title" content="说说safari的video onprogress">
+<meta property="og:url" content="http://zobor.me/2015/12/17/说说safari的onprogress/index.html">
 <meta property="og:site_name" content="Zobor">
-<meta property="og:description" content="支持autoplay
+<meta property="og:description" content="Mac: 10.10.3Safari: 8.0.5video format: mp4
 
-
-设备
-微信
-手Q
-Mobile Chrome
-Mobile Safari
-自带浏览器
-
-
-
-
-iphone4
--
--
--
--
--
-
-
-iphone5s
-true
-true
--
--
--
-
-
-iphone6
-true
-true
--
--
--
-
-
-ipad
-true
-－
--
--
--
-
-
-华为Mate7
--
--
--
--
-true
-
-
-华为P6
--
--
--
--
--
-
-
-小米2
--
--">
-<meta property="og:updated_time" content="2015-12-14T11:20:32.000Z">
+youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧。测试发现，safari的onprogress比较鸡肋，根本不是标准的。只有视频全部cache完才会触发，靠onprogress来设计控制栏已经不能简单兼容多浏览器了。
+同属webk">
+<meta property="og:updated_time" content="2015-12-18T01:24:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="web终端对html5 video的支持统计">
-<meta name="twitter:description" content="支持autoplay
+<meta name="twitter:title" content="说说safari的video onprogress">
+<meta name="twitter:description" content="Mac: 10.10.3Safari: 8.0.5video format: mp4
 
-
-设备
-微信
-手Q
-Mobile Chrome
-Mobile Safari
-自带浏览器
-
-
-
-
-iphone4
--
--
--
--
--
-
-
-iphone5s
-true
-true
--
--
--
-
-
-iphone6
-true
-true
--
--
--
-
-
-ipad
-true
-－
--
--
--
-
-
-华为Mate7
--
--
--
--
-true
-
-
-华为P6
--
--
--
--
--
-
-
-小米2
--
--">
+youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧。测试发现，safari的onprogress比较鸡肋，根本不是标准的。只有视频全部cache完才会触发，靠onprogress来设计控制栏已经不能简单兼容多浏览器了。
+同属webk">
 
 
 
@@ -261,7 +81,7 @@ true
   };
 </script>
 
-  <title> web终端对html5 video的支持统计 | Zobor </title>
+  <title> 说说safari的video onprogress | Zobor </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -421,7 +241,7 @@ true
             
             
               
-                web终端对html5 video的支持统计
+                说说safari的video onprogress
               
             
           </h1>
@@ -430,8 +250,8 @@ true
         <div class="post-meta">
           <span class="post-time">
             Posted on
-            <time itemprop="dateCreated" datetime="2015-10-03T23:29:33+08:00" content="2015-10-03">
-              2015-10-03
+            <time itemprop="dateCreated" datetime="2015-12-17T21:51:55+08:00" content="2015-12-17">
+              2015-12-17
             </time>
           </span>
 
@@ -469,621 +289,16 @@ true
       
 
       
-        <span itemprop="articleBody"><h2 id="u652F_u6301autoplay"><a href="#u652F_u6301autoplay" class="headerlink" title="支持autoplay"></a>支持autoplay</h2><table>
-<thead>
-<tr>
-<th>设备</th>
-<th>微信</th>
-<th>手Q</th>
-<th>Mobile Chrome</th>
-<th>Mobile Safari</th>
-<th>自带浏览器</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iphone4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone5s</td>
-<td>true</td>
-<td>true</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone6</td>
-<td>true</td>
-<td>true</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ipad</td>
-<td>true</td>
-<td>－</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>华为Mate7</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>true</td>
-</tr>
-<tr>
-<td>华为P6</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米2</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<h2 id="u652F_u6301preload"><a href="#u652F_u6301preload" class="headerlink" title="支持preload"></a>支持preload</h2><table>
-<thead>
-<tr>
-<th>设备</th>
-<th>微信</th>
-<th>手Q</th>
-<th>Mobile Chrome</th>
-<th>Mobile Safari</th>
-<th>自带浏览器</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iphone4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone5s</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone6</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ipad</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>华为Mate7</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>华为P6</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米2</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<p>总结：手机设备都不支持preload</p>
-<h2 id="u652F_u6301mute"><a href="#u652F_u6301mute" class="headerlink" title="支持mute"></a>支持mute</h2><table>
-<thead>
-<tr>
-<th>设备</th>
-<th>微信</th>
-<th>手Q</th>
-<th>Mobile Chrome</th>
-<th>Mobile Safari</th>
-<th>自带浏览器</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iphone4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone5s</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone6</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ipad</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>华为Mate7</td>
-<td>-</td>
-<td>-</td>
-<td>true</td>
-<td>-</td>
-<td>true</td>
-</tr>
-<tr>
-<td>华为P6</td>
-<td>-</td>
-<td>-</td>
-<td>true</td>
-<td>-</td>
-<td>true</td>
-</tr>
-<tr>
-<td>小米2</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<p>总结：ios设备不支持mute</p>
-<h2 id="u652F_u6301volume"><a href="#u652F_u6301volume" class="headerlink" title="支持volume"></a>支持volume</h2><table>
-<thead>
-<tr>
-<th>设备</th>
-<th>微信</th>
-<th>手Q</th>
-<th>Mobile Chrome</th>
-<th>Mobile Safari</th>
-<th>自带浏览器</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iphone4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone5s</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone6</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ipad</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>华为Mate7</td>
-<td>-</td>
-<td>-</td>
-<td>true</td>
-<td>-</td>
-<td>true</td>
-</tr>
-<tr>
-<td>华为P6</td>
-<td>-</td>
-<td>-</td>
-<td>true</td>
-<td>-</td>
-<td>true</td>
-</tr>
-<tr>
-<td>小米2</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<p>总结：ios设备不支持volume</p>
-<h2 id="u652F_u6301playbackRate"><a href="#u652F_u6301playbackRate" class="headerlink" title="支持playbackRate"></a>支持playbackRate</h2><table>
-<thead>
-<tr>
-<th>设备</th>
-<th>微信</th>
-<th>手Q</th>
-<th>Mobile Chrome</th>
-<th>Mobile Safari</th>
-<th>自带浏览器</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iphone4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone5s</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone6</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ipad</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>-</td>
-</tr>
-<tr>
-<td>华为Mate7</td>
-<td>-</td>
-<td>-</td>
-<td>true</td>
-<td>-</td>
-<td>true</td>
-</tr>
-<tr>
-<td>华为P6</td>
-<td>-</td>
-<td>-</td>
-<td>true</td>
-<td>-</td>
-<td>true</td>
-</tr>
-<tr>
-<td>小米2</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
-<h2 id="u652F_u6301loop"><a href="#u652F_u6301loop" class="headerlink" title="支持loop"></a>支持loop</h2><table>
-<thead>
-<tr>
-<th>设备</th>
-<th>微信</th>
-<th>手Q</th>
-<th>Mobile Chrome</th>
-<th>Mobile Safari</th>
-<th>自带浏览器</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iphone4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone5s</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>-</td>
-</tr>
-<tr>
-<td>iphone6</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>-</td>
-</tr>
-<tr>
-<td>ipad</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>true</td>
-<td>-</td>
-</tr>
-<tr>
-<td>华为Mate7</td>
-<td>-</td>
-<td>-</td>
-<td>true</td>
-<td>-</td>
-<td>－</td>
-</tr>
-<tr>
-<td>华为P6</td>
-<td>-</td>
-<td>-</td>
-<td>true</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米2</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>小米4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx3</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>魅族mx4</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
+        <span itemprop="articleBody"><p>Mac: 10.10.3<br>Safari: 8.0.5<br>video format: mp4</p>
+<hr>
+<p>youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧。<br>测试发现，safari的onprogress比较鸡肋，根本不是标准的。只有视频全部cache完才会触发，靠onprogress来设计控制栏已经不能简单兼容多浏览器了。</p>
+<p>同属webkit，safari，你不羞耻吗？<br>官方的文档里的demo，视频还没发播（Http/1.1 Service Unavailable），这么大的厂，不忍直视。。。<br>其实，没有progress，我们可以用timeupdate + setInterval，切记做好性能优化。其实也是可以实现的。</p>
+<h3 id="u53C2_u8003_u6587_u6863"><a href="#u53C2_u8003_u6587_u6863" class="headerlink" title="参考文档"></a>参考文档</h3><ul>
+<li><a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/ControllingMediaWithJavaScript/ControllingMediaWithJavaScript.html#//apple_ref/doc/uid/TP40009523-CH3-SW4" target="_blank" rel="external">Safari HTML5 Audio and Video Guide</a></li>
+</ul>
+<h3 id="u5EF6_u4F38_u9605_u8BFB"><a href="#u5EF6_u4F38_u9605_u8BFB" class="headerlink" title="延伸阅读"></a>延伸阅读</h3><ul>
+<li><a href="https://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009523" target="_blank" rel="external">About HTML5 Audio and Video</a></li>
+</ul>
 </span>
       
     </div>
@@ -1094,6 +309,10 @@ true
           
             <a href="/tags/html5/" rel="tag">#html5</a>
           
+            <a href="/tags/mac/" rel="tag">#mac</a>
+          
+            <a href="/tags/safari/" rel="tag">#safari</a>
+          
             <a href="/tags/video/" rel="tag">#video</a>
           
         </div>
@@ -1103,17 +322,13 @@ true
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/03/杀掉指定端口的node进程/" rel="next" title="杀掉指定端口的node进程">
-                <i class="fa fa-chevron-left"></i> 杀掉指定端口的node进程
+              <a href="/2015/12/14/web设备UA统计/" rel="next" title="web设备UA统计">
+                <i class="fa fa-chevron-left"></i> web设备UA统计
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/14/web设备UA统计/" rel="prev" title="web设备UA统计">
-                web设备UA统计 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1275,7 +490,7 @@ true
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u652F_u6301autoplay"><span class="nav-number">1.</span> <span class="nav-text">支持autoplay</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u652F_u6301preload"><span class="nav-number">2.</span> <span class="nav-text">支持preload</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u652F_u6301mute"><span class="nav-number">3.</span> <span class="nav-text">支持mute</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u652F_u6301volume"><span class="nav-number">4.</span> <span class="nav-text">支持volume</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u652F_u6301playbackRate"><span class="nav-number">5.</span> <span class="nav-text">支持playbackRate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u652F_u6301loop"><span class="nav-number">6.</span> <span class="nav-text">支持loop</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u53C2_u8003_u6587_u6863"><span class="nav-number">1.</span> <span class="nav-text">参考文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5EF6_u4F38_u9605_u8BFB"><span class="nav-number">2.</span> <span class="nav-text">延伸阅读</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
