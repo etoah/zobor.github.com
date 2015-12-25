@@ -5,15 +5,37 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zobor.me//"/>
-  <updated>2015-12-18T02:44:45.000Z</updated>
+  <updated>2015-12-25T01:26:06.000Z</updated>
   <id>http://zobor.me//</id>
   
   <author>
-    <name><![CDATA[zoborzhang]]></name>
+    <name><![CDATA[Zobor]]></name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[html5 video如何判断直播流结束?]]></title>
+    <link href="http://zobor.me/2015/12/25/html5-video%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E7%9B%B4%E6%92%AD%E6%B5%81%E7%BB%93%E6%9D%9F/"/>
+    <id>http://zobor.me/2015/12/25/html5-video如何判断直播流结束/</id>
+    <published>2015-12-25T14:47:40.000Z</published>
+    <updated>2015-12-25T01:26:06.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="m3u8_u6587_u4EF6_u7B80_u4ECB"><a href="#m3u8_u6587_u4EF6_u7B80_u4ECB" class="headerlink" title="m3u8文件简介"></a>m3u8文件简介</h1><p>m3u8，是HTTP Live Streaming直播的索引文件。m3u8基本上可以认为就是.m3u格式文件.</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#EXTM3U</span>                     m3u文件头，必须放在第一行</span><br><span class="line"><span class="id">#EXT-X-MEDIA-SEQUENCE</span>       第一个TS分片的序列号</span><br><span class="line"><span class="id">#EXT-X-TARGETDURATION</span>       每个分片TS的最大的时长</span><br><span class="line"><span class="id">#EXT-X-ALLOW-CACHE</span>          是否允许cache</span><br><span class="line"><span class="id">#EXT-X-ENDLIST</span>              m3u8文件结束符</span><br><span class="line"><span class="id">#EXTINF</span>                     extra info，分片TS的信息，如时长，带宽等</span><br></pre></td></tr></table></figure>
+<p>未完待续</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="m3u8_u6587_u4EF6_u7B80_u4ECB"><a href="#m3u8_u6587_u4EF6_u7B80_u4ECB" class="headerlink" title="m3u8文件简介"></a>m3u8文件简介</h1><p>m3u8，是]]>
+    </summary>
+    
+      <category term="html5" scheme="http://zobor.me/tags/html5/"/>
+    
+      <category term="video" scheme="http://zobor.me/tags/video/"/>
+    
+      <category term="前端开发" scheme="http://zobor.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[说说safari的video onprogress]]></title>
