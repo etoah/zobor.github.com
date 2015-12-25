@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>web设备UA统计 | Zobor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ipadplatform=iPad
+
+[chrome] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13A344 Safari/601.1.46 (000445)
+[safari] Mozilla/5.0 (iPad; CPU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web设备UA统计">
+<meta property="og:url" content="http://zobor.me/2014/12/14/web设备UA统计/index.html">
+<meta property="og:site_name" content="Zobor">
+<meta property="og:description" content="ipadplatform=iPad
+
+[chrome] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13A344 Safari/601.1.46 (000445)
+[safari] Mozilla/5.0 (iPad; CPU">
+<meta property="og:image" content="http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1KzlBeFdZNk9UZm9YZjl1elJFTHdCMTdKVUxYeGc2M3BBPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
+<meta property="og:updated_time" content="2015-12-25T05:07:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="web设备UA统计">
+<meta name="twitter:description" content="ipadplatform=iPad
+
+[chrome] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13A344 Safari/601.1.46 (000445)
+[safari] Mozilla/5.0 (iPad; CPU">
+  
+  
+    <link rel="shortcut icon" href="/images/default_avatar.jpg">
+  
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-71427034-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header" class="print-invisible">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><span class="site-title">Zobor</span></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/archives/">Archives</a>
+        
+          <a class="main-nav-link" href="/tags/">Tags</a>
+        
+          <a class="main-nav-link" href="/about/">About</a>
+        
+      </nav>
+      
+      <nav id="sub-nav">
+        <div class="profile" id="profile-nav">
+          <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/images/default_avatar.jpg"><i class="fa fa-caret-down"></i></a>
+        </div>
+      </nav>
+      
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://zobor.me"></form>
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+      
+        <td><a class="main-nav-link" href="/archives/">Archives</a></td>
+      
+        <td><a class="main-nav-link" href="/tags/">Tags</a></td>
+      
+        <td><a class="main-nav-link" href="/about/">About</a></td>
+      
+      <td>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://zobor.me"></form>
+      </td>
+      </tr>
+    </table>
+  </div>
+</header>
+    <div class="outer">
+      
+        <aside id="profile">
+  <div class="inner profile-inner">
+  	<div class="base-info profile-block">
+      <img id="avatar" src="/images/default_avatar.jpg">
+      <h2 id="name">Zobor</h2>
+      <h3 id="title">Web Developer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>ShenZhen, China</span>
+      <a id="follow" href="https://twitter.com/zoborzhang/" target="_blank">FOLLOW</a>
+    </div>
+    
+    <div class="base-info profile-block">
+      <p><center>前端开发@腾讯视频</center></p>
+    </div>
+    
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        7
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        9
+        <span>tags</span>
+      </div>
+    </div>
+    
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+        
+        
+        
+        <td><a href="http://github.com/zobor" target="_blank" title="github"><i   class="fa fa-github"></i></a></td>
+        
+        
+        
+        <td><a href="https://twitter.com/zoborzhang" target="_blank" title="twitter"><i   class="fa fa-twitter"></i></a></td>
+        
+        
+        
+        <td><a href="https://facebook.com/zoborzhang" target="_blank" title="facebook"><i   class="fa fa-facebook"></i></a></td>
+        
+        
+        
+        <td><a href="/atom.xml" target="_blank" title="rss"><i   class="fa fa-rss"></i></a></td>
+        
+        </tr>
+      </table>
+    </div>
+    
+  </div>
+</aside>
+      
+      <section id="main"><article id="post-web设备UA统计" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      web设备UA统计
+    </h1>
+  
+
+        
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+    <time datetime="2014-12-14T11:20:51.000Z" itemprop="datePublished">2014-12-14</time>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/前端开发/">前端开发</a>
+  </div>
+
+          
+<div class="article-category">
+	<i class="fa fa-flag"></i>
+	<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Hits
+</div>
+
+
+          
+<div class="article-author"><i class="fa fa-user"></i>
+  
+  <a href="http://zobor.me" title="Zobor">Zobor</a>
+</div>
+  
+
+        </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div id="toc" class="toc-article">
+          <!-- <strong class="toc-title">contents</strong> -->
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ipad"><span class="toc-number">1.</span> <span class="toc-text">ipad</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iphone_6"><span class="toc-number">2.</span> <span class="toc-text">iphone 6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u534E_u4E3AMate7_uFF08HUAWEI_MT7-TL00_uFF09"><span class="toc-number">3.</span> <span class="toc-text">华为Mate7（HUAWEI MT7-TL00）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iMac"><span class="toc-number">4.</span> <span class="toc-text">iMac</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows"><span class="toc-number">5.</span> <span class="toc-text">Windows</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#huawei_p6"><span class="toc-number">6.</span> <span class="toc-text">huawei p6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#samsung_s3"><span class="toc-number">7.</span> <span class="toc-text">samsung s3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#huawei_g750"><span class="toc-number">8.</span> <span class="toc-text">huawei g750</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ipod"><span class="toc-number">9.</span> <span class="toc-text">ipod</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u575A_u679C_u624B_u673A"><span class="toc-number">10.</span> <span class="toc-text">坚果手机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#google_Nexus_5"><span class="toc-number">11.</span> <span class="toc-text">google Nexus 5</span></a></li></ol>
+        </div>
+      
+        <p><img src="http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1KzlBeFdZNk9UZm9YZjl1elJFTHdCMTdKVUxYeGc2M3BBPT0.jpg?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"></p>
+<h2 id="ipad"><a href="#ipad" class="headerlink" title="ipad"></a>ipad</h2><p><code>platform=iPad</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13A344 Safari/601.1.46 (000445)</li>
+<li>[safari] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13A344 Safari/601.1</li>
+<li>[wechat] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A344 MicroMessenger/6.2.2 NetType/WIFI Language/zh_CN</li>
+<li>[qq] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A344 IPadQQ/5.1.0.317 QQ/5.1.0.317</li>
+<li>[qzone] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A344</li>
+</ul>
+<h2 id="iphone_6"><a href="#iphone_6" class="headerlink" title="iphone 6"></a>iphone 6</h2><p><code>platform=iPhone</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13B143 Safari/601.1.46 (000406)</li>
+<li>[safari] Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1</li>
+<li>[wechat] Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 MicroMessenger/6.3.8 NetType/WIFI Language/zh_CN</li>
+<li>[qq] Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 QQ/6.1.0.496 Pixel/750 NetType/WIFI Mem/70</li>
+<li>[qzone] QZONEJSSDK/5.8.1.1 QQJSSDK/1.2 Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 Qzone/V1_IPH_QZ_5.8.1_1_APP_A NewVersion</li>
+</ul>
+<h2 id="u534E_u4E3AMate7_uFF08HUAWEI_MT7-TL00_uFF09"><a href="#u534E_u4E3AMate7_uFF08HUAWEI_MT7-TL00_uFF09" class="headerlink" title="华为Mate7（HUAWEI MT7-TL00）"></a>华为Mate7（HUAWEI MT7-TL00）</h2><p><code>platform=Linux armv7l</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Mobile Safari/537.36</li>
+<li>[wechat] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 MicroMessenger/6.3.7.65_r060a025.660 NetType/WIFI Language/zh_CN</li>
+<li>[qq] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025477 Mobile Safari/533.1 V1_AND_SQ_6.0.1_302_YYB_D QQ/6.0.1.2610 NetType/WIFI WebP/0.3.0 Pixel/1080</li>
+<li>[qzone] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 QQJSSDK/1.3 Qzone/V1_AND_QZ_6.0.1_288_YYB_D QZONEJSSDK/6.0</li>
+<li>[mqqbrowser] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/6.3 Mobile Safari/537.36</li>
+<li>[ucbrowser] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/10.9.0.703 U3/0.8.0 Mobile Safari/534.30</li>
+<li>[Default] HUAWEI_MT7-TL00_TD/5.0 Android/4.4.2 (Linux; U; Android 4.4.2; zh-cn) Release/01.18.2014 Browser/WAP2.0 (AppleWebKit/537.36) Mobile Safari/537.36</li>
+</ul>
+<h2 id="iMac"><a href="#iMac" class="headerlink" title="iMac"></a>iMac</h2><p><code>platform=MacIntel</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36</li>
+<li>[safari] Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17</li>
+<li>[firefox] Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:42.0) Gecko/20100101 Firefox/42.0</li>
+<li>[qqbrowser] Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36 QQBrowser/3.9.3952.400</li>
+</ul>
+<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><p><code>platform=Win32</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36</li>
+<li>[firefox] Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0</li>
+<li>[ie] Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E</li>
+</ul>
+<h2 id="huawei_p6"><a href="#huawei_p6" class="headerlink" title="huawei p6"></a>huawei p6</h2><ul>
+<li>[chrome] Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI P6-C00 Build/HuaweiP6-C00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.93 Mobile Safari/537.36</li>
+</ul>
+<h2 id="samsung_s3"><a href="#samsung_s3" class="headerlink" title="samsung s3"></a>samsung s3</h2><ul>
+<li>[mqq] Mozilla/5.0 (Linux; U; Android 4.1.2; zh-cn; GT-I9300 Build/JZO54K) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 V1_AND_SQ_6.0.1_302_YYB_D QQ/6.0.1.2610 NetType/WIFI WebP/0.3.0 Pixel/720</li>
+</ul>
+<h2 id="huawei_g750"><a href="#huawei_g750" class="headerlink" title="huawei g750"></a>huawei g750</h2><ul>
+<li>[mqq] Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; HUAWEI G750-T00 Build/HuaweiG750-T00) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 MicroMessenger/6.3.7.65_r060a025.660 NetType/WIFI Language/zh_CN</li>
+</ul>
+<h2 id="ipod"><a href="#ipod" class="headerlink" title="ipod"></a>ipod</h2><ul>
+<li>[wechat] Mozilla/5.0 (iPod touch; CPU iPhone OS 7_1_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D201 MicroMessenger/6.3.6 NetType/WIFI Language/zh_CN</li>
+</ul>
+<h2 id="u575A_u679C_u624B_u673A"><a href="#u575A_u679C_u624B_u673A" class="headerlink" title="坚果手机"></a>坚果手机</h2><ul>
+<li>[Default] Mozilla/5.0 (Linux; Android 4.4.4; YQ601 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.102 Mobile Safari/537.36</li>
+<li>[wechat] Mozilla/5.0 (Linux; Android 4.4.4; YQ601 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 MicroMessenger/6.1.0.57_r1048261.540 NetType/WIFI</li>
+</ul>
+<h2 id="google_Nexus_5"><a href="#google_Nexus_5" class="headerlink" title="google Nexus 5"></a>google Nexus 5</h2><ul>
+<li>[wechat] Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn; Nexus 5 Build/LMY48I) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 MicroMessenger/6.3.8.50_r251a77a.680 NetType/WIFI Language/zh_CN</li>
+</ul>
+
+        
+
+        
+
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="article-footer print-invisible">
+      <a data-url="http://zobor.me/2014/12/14/web设备UA统计/" data-id="ciil3ndwj000lq0fo39tuehwu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="print-invisible">
+  
+    <a href="/2015/05/30/hello-zobor/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          hello zobor
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/10/03/web终端对html5-video的支持统计/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">web终端对html5 video的支持统计</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+<div class="print-invisible">
+  
+
+</div>
+
+</section>
+      
+        <aside id="sidebar" class="print-invisible">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/11/25/html5-video如何判断直播流结束/" class="thumbnail">
+  
+    <span style="background-image:url(http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1LzlWdE0wWjZzSUdqN2V6Y2JYUmlZWkt0UkxVZHdzREV3PT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg)" alt="html5 video如何判断直播流结束?" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/2015/11/25/html5-video如何判断直播流结束/" class="title">html5 video如何判断直播流结束?</a></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/前端开发/">前端开发</a></p>
+              <p class="item-date"><time datetime="2015-11-25T14:47:40.000Z" itemprop="datePublished">2015-11-25</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/06/30/html5开发之fiddler配置总结/" class="thumbnail">
+  
+    <span style="background-image:url(http://imglf0.nosdn.127.net/img/SW5VVnJZRTBwMm1VTEdwdC9tZFg1V0J2U244dTBRUTc4ZjVjZURNU3BWRUo5UjdNdm9yN2VRPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg)" alt="html5开发之fiddler配置总结" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/2015/06/30/html5开发之fiddler配置总结/" class="title">html5开发之fiddler配置总结</a></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/前端开发/">前端开发</a></p>
+              <p class="item-date"><time datetime="2015-06-30T12:22:50.000Z" itemprop="datePublished">2015-06-30</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/06/17/说说safari的onprogress/" class="thumbnail">
+  
+    <span style="background-image:url(http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1OUtQQmczTy90VDYwbWZkK3A3R05zYTQvMElBWXRwVjhBPT0.png?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg)" alt="说说safari的video onprogress" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/2015/06/17/说说safari的onprogress/" class="title">说说safari的video onprogress</a></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/前端开发/">前端开发</a></p>
+              <p class="item-date"><time datetime="2015-06-17T13:51:55.000Z" itemprop="datePublished">2015-06-17</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/05/30/hello-zobor/" class="thumbnail">
+  
+    <span style="background-image:url(/images/hello.jpg)" alt="hello zobor" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/2015/05/30/hello-zobor/" class="title">hello zobor</a></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/扯淡/">扯淡</a></p>
+              <p class="item-date"><time datetime="2015-05-30T05:19:00.000Z" itemprop="datePublished">2015-05-30</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2014/12/14/web设备UA统计/" class="thumbnail">
+  
+    <span style="background-image:url(http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1KzlBeFdZNk9UZm9YZjl1elJFTHdCMTdKVUxYeGc2M3BBPT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg)" alt="web设备UA统计" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/2014/12/14/web设备UA统计/" class="title">web设备UA统计</a></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/前端开发/">前端开发</a></p>
+              <p class="item-date"><time datetime="2014-12-14T11:20:51.000Z" itemprop="datePublished">2014-12-14</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/">前端开发</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/扯淡/">扯淡</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap widget-list">
+    <h3 class="widget-title">links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://www.hgdonline.net/">HGDonline</a>
+          </li>
+        
+          <li>
+            <a href="http://verycb.me/">VeryCb</a>
+          </li>
+        
+          <li>
+            <a href="http://mrfig.org/">MrFig</a>
+          </li>
+        
+          <li>
+            <a href="http://ifeng.name/">Fenix</a>
+          </li>
+        
+          <li>
+            <a href="http://blog.coolfly.net/">Coolfly</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer" class="print-invisible">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Zobor<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/JamesPan/hexo-theme-icarus">icarus</a>. 
+    </div>
+  </div>
+</footer>
+    
+
+
+<script async="async" src="//dn-lbstatics.qbox.me/lbservice/busuanzi/2.0/busuanzi.mini.js"></script>
+
+<script type="text/javascript">
+$("span.heimu").attr("title", "你知道的太多了")
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
