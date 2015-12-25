@@ -6,19 +6,28 @@
   <title>html5 video如何判断直播流结束? | Zobor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="m3u8文件简介m3u8，是HTTP Live Streaming直播的索引文件。m3u8基本上可以认为就是.m3u格式文件.
-123456#EXTM3U                     m3u文件头，必须放在第一行#EXT-X-MEDIA-SEQUENCE       第一个TS分片的序列号#EXT-X-TARGETDURATION       每个分片TS的最大的时长#EXT-X-AL">
+#EXTM3U                     m3u文件头，必须放在第一行
+#EXT-X-MEDIA-SEQUENCE       第一个TS分片的序列号
+#EXT-X-TARGETDURATION       每个分片TS的最大的时长
+#EXT-X-ALLOW">
 <meta property="og:type" content="article">
 <meta property="og:title" content="html5 video如何判断直播流结束?">
 <meta property="og:url" content="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/index.html">
 <meta property="og:site_name" content="Zobor">
 <meta property="og:description" content="m3u8文件简介m3u8，是HTTP Live Streaming直播的索引文件。m3u8基本上可以认为就是.m3u格式文件.
-123456#EXTM3U                     m3u文件头，必须放在第一行#EXT-X-MEDIA-SEQUENCE       第一个TS分片的序列号#EXT-X-TARGETDURATION       每个分片TS的最大的时长#EXT-X-AL">
+#EXTM3U                     m3u文件头，必须放在第一行
+#EXT-X-MEDIA-SEQUENCE       第一个TS分片的序列号
+#EXT-X-TARGETDURATION       每个分片TS的最大的时长
+#EXT-X-ALLOW">
 <meta property="og:image" content="http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1LzlWdE0wWjZzSUdqN2V6Y2JYUmlZWkt0UkxVZHdzREV3PT0.jpg?imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg">
 <meta property="og:updated_time" content="2015-12-25T05:07:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html5 video如何判断直播流结束?">
 <meta name="twitter:description" content="m3u8文件简介m3u8，是HTTP Live Streaming直播的索引文件。m3u8基本上可以认为就是.m3u格式文件.
-123456#EXTM3U                     m3u文件头，必须放在第一行#EXT-X-MEDIA-SEQUENCE       第一个TS分片的序列号#EXT-X-TARGETDURATION       每个分片TS的最大的时长#EXT-X-AL">
+#EXTM3U                     m3u文件头，必须放在第一行
+#EXT-X-MEDIA-SEQUENCE       第一个TS分片的序列号
+#EXT-X-TARGETDURATION       每个分片TS的最大的时长
+#EXT-X-ALLOW">
   
   
     <link rel="shortcut icon" href="/images/default_avatar.jpg">
@@ -202,8 +211,13 @@ ga('send', 'pageview');
       
         <p><img src="http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1LzlWdE0wWjZzSUdqN2V6Y2JYUmlZWkt0UkxVZHdzREV3PT0.jpg?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"></p>
 <h1 id="m3u8_u6587_u4EF6_u7B80_u4ECB"><a href="#m3u8_u6587_u4EF6_u7B80_u4ECB" class="headerlink" title="m3u8文件简介"></a>m3u8文件简介</h1><p>m3u8，是HTTP Live Streaming直播的索引文件。m3u8基本上可以认为就是.m3u格式文件.</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#EXTM3U</span>                     m3u文件头，必须放在第一行</span><br><span class="line"><span class="id">#EXT-X-MEDIA-SEQUENCE</span>       第一个TS分片的序列号</span><br><span class="line"><span class="id">#EXT-X-TARGETDURATION</span>       每个分片TS的最大的时长</span><br><span class="line"><span class="id">#EXT-X-ALLOW-CACHE</span>          是否允许cache</span><br><span class="line"><span class="id">#EXT-X-ENDLIST</span>              m3u8文件结束符</span><br><span class="line"><span class="id">#EXTINF</span>                     extra info，分片TS的信息，如时长，带宽等</span><br></pre></td></tr></table></figure>
-<p>未完待续</p>
+<pre><code>#EXTM3U                     m3u文件头，必须放在第一行
+#EXT-X-MEDIA-SEQUENCE       第一个TS分片的序列号
+#EXT-X-TARGETDURATION       每个分片TS的最大的时长
+#EXT-X-ALLOW-CACHE          是否允许cache
+#EXT-X-ENDLIST              m3u8文件结束符
+#EXTINF                     extra info，分片TS的信息，如时长，带宽等
+</code></pre><p>未完待续</p>
 
         
 
@@ -218,7 +232,7 @@ ga('send', 'pageview');
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/" data-id="ciil84m59000y4cfok9lmclmm" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/" data-id="ciilcq1rg000yaiforc287cl2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/">video</a></li></ul>
