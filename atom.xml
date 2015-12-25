@@ -71,7 +71,7 @@
     <link href="http://zobor.me/2015/06/17/%E8%AF%B4%E8%AF%B4safari%E7%9A%84onprogress/"/>
     <id>http://zobor.me/2015/06/17/说说safari的onprogress/</id>
     <published>2015-06-17T13:51:55.000Z</published>
-    <updated>2015-12-25T05:07:05.000Z</updated>
+    <updated>2015-12-25T05:07:06.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1OUtQQmczTy90VDYwbWZkK3A3R05zYTQvMElBWXRwVjhBPT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"><br>测试环境：<br>Mac: 10.10.3<br>Safari: 8.0.5<br>video format: mp4</p>
 <hr>
 <p>youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧。<br>测试发现，safari的onprogress比较鸡肋，根本不是标准的。只有视频全部cache完才会触发，靠onprogress来设计控制栏已经不能简单兼容多浏览器了。</p>
