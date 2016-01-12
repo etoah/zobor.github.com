@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: hello | Zobor</title>
+  <title>Mac用Homebrew SSL证书错误 | Zobor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="zobor">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zobor">
-<meta property="og:url" content="http://zobor.me/tags/hello/index.html">
+  <meta name="description" content="brew install lrzsz
+通过https下载的时候提示如下错误：
+==&amp;gt; Downloading http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+==&amp;gt; Downloading from https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+
+curl: (60) SSL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac用Homebrew SSL证书错误">
+<meta property="og:url" content="http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/index.html">
 <meta property="og:site_name" content="Zobor">
-<meta property="og:description" content="zobor">
+<meta property="og:description" content="brew install lrzsz
+通过https下载的时候提示如下错误：
+==&amp;gt; Downloading http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+==&amp;gt; Downloading from https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+
+curl: (60) SSL">
+<meta property="og:updated_time" content="2016-01-12T06:54:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zobor">
-<meta name="twitter:description" content="zobor">
+<meta name="twitter:title" content="Mac用Homebrew SSL证书错误">
+<meta name="twitter:description" content="brew install lrzsz
+通过https下载的时候提示如下错误：
+==&amp;gt; Downloading http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+==&amp;gt; Downloading from https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+
+curl: (60) SSL">
   
   
     <link rel="shortcut icon" href="/images/default_avatar.jpg">
@@ -144,45 +160,126 @@ ga('send', 'pageview');
   </div>
 </aside>
       
-      <section id="main">
-    <section class="archives-wrap">
-    <div class="archive-tag-wrap">
-      <i class="fa fa-tag"></i>
-      <span class="archive-tag">#hello</span>
-    </div>
-    <div class="archives">
+      <section id="main"><article id="post-Mac用Homebrew-SSL证书错误" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
     
-    <div class="archive-article-thumbnail">
-      <a href="/2015/05/30/hello-zobor/" class="thumbnail">
-  
-    <span style="background-image:url(/images/hello.jpg)" alt="hello zobor" class="thumbnail-image"></span>
-  
-</a>
-    </div>
     
-    <header class="archive-article-header">
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/05/30/hello-zobor/">hello zobor</a>
+    <h1 class="article-title" itemprop="name">
+      Mac用Homebrew SSL证书错误
     </h1>
   
 
-      
-        <div class="archive-article-date">
+        
+        <div class="article-meta">
+          <div class="article-date">
   <i class="fa fa-calendar"></i>
-    <time datetime="2015-05-30T05:19:00.000Z" itemprop="datePublished">2015 May 30</time>
+    <time datetime="2016-01-12T06:50:27.000Z" itemprop="datePublished">2016-01-12</time>
 </div>
-      
-    </header>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Mac/">Mac</a>
   </div>
-</article>
+
+          
+<div class="article-category">
+	<i class="fa fa-flag"></i>
+	<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Hits
+</div>
+
+
+          
+<div class="article-author"><i class="fa fa-user"></i>
+  
+  <a href="http://zobor.me" title="Zobor">Zobor</a>
+</div>
+  
+
+        </div>
+        
+      </header>
     
-    </div></section>
-    </section>
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <div id="toc" class="toc-article">
+          <!-- <strong class="toc-title">contents</strong> -->
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u89E3_u51B3_u529E_u6CD5"><span class="toc-number">1.</span> <span class="toc-text">解决办法</span></a></li></ol>
+        </div>
+      
+        <pre><code>brew install lrzsz
+</code></pre><p>通过https下载的时候提示如下错误：</p>
+<pre><code>==&gt; Downloading http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+==&gt; Downloading from https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+
+curl: (60) SSL certificate problem: Invalid certificate chain
+More details here: http://curl.haxx.se/docs/sslcerts.html
+
+curl performs SSL certificate verification by default, using a &quot;bundle&quot;
+ of Certificate Authority (CA) public keys (CA certs). If the default
+ bundle file isn&#39;t adequate, you can specify an alternate file
+ using the --cacert option.
+If this HTTPS server uses a certificate signed by a CA represented in
+ the bundle, the certificate verification probably failed due to a
+ problem with the certificate (it might be expired, or the name might
+ not match the domain name in the URL).
+If you&#39;d like to turn off curl&#39;s verification of the certificate, use
+ the -k (or --insecure) option.
+Error: Failed to download resource &quot;lrzsz&quot;
+Download failed: https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+qqlivedeiMac:~ zoborzhang$ wget
+wget: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help&#39; for more options.
+</code></pre><h2 id="u89E3_u51B3_u529E_u6CD5"><a href="#u89E3_u51B3_u529E_u6CD5" class="headerlink" title="解决办法"></a>解决办法</h2><pre><code>cd /Library/Caches/Homebrew/
+wget --no-check-certificate https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+brew upgrade lrzsz
+</code></pre>
+        
+
+        
+
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="article-footer print-invisible">
+      <a data-url="http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/" data-id="cijb1l8t50017drfoky0fnq7c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/error/">error</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="print-invisible">
+  
+  
+    <a href="/2015/11/25/html5-video如何判断直播流结束/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">html5 video如何判断直播流结束?</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+<div class="print-invisible">
+  
+
+</div>
+
+</section>
       
         <aside id="sidebar" class="print-invisible">
   

@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zobor.me//"/>
-  <updated>2015-12-25T05:07:16.000Z</updated>
+  <updated>2016-01-12T06:54:34.000Z</updated>
   <id>http://zobor.me//</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Mac用Homebrew SSL证书错误]]></title>
+    <link href="http://zobor.me/2016/01/12/Mac%E7%94%A8Homebrew-SSL%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/"/>
+    <id>http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/</id>
+    <published>2016-01-12T06:50:27.000Z</published>
+    <updated>2016-01-12T06:54:34.000Z</updated>
+    <content type="html"><![CDATA[<pre><code>brew install lrzsz
+</code></pre><p>通过https下载的时候提示如下错误：</p>
+<pre><code>==&gt; Downloading http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+==&gt; Downloading from https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+
+curl: (60) SSL certificate problem: Invalid certificate chain
+More details here: http://curl.haxx.se/docs/sslcerts.html
+
+curl performs SSL certificate verification by default, using a &quot;bundle&quot;
+ of Certificate Authority (CA) public keys (CA certs). If the default
+ bundle file isn&#39;t adequate, you can specify an alternate file
+ using the --cacert option.
+If this HTTPS server uses a certificate signed by a CA represented in
+ the bundle, the certificate verification probably failed due to a
+ problem with the certificate (it might be expired, or the name might
+ not match the domain name in the URL).
+If you&#39;d like to turn off curl&#39;s verification of the certificate, use
+ the -k (or --insecure) option.
+Error: Failed to download resource &quot;lrzsz&quot;
+Download failed: https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+qqlivedeiMac:~ zoborzhang$ wget
+wget: missing URL
+Usage: wget [OPTION]... [URL]...
+
+Try `wget --help&#39; for more options.
+</code></pre><h2 id="u89E3_u51B3_u529E_u6CD5"><a href="#u89E3_u51B3_u529E_u6CD5" class="headerlink" title="解决办法"></a>解决办法</h2><pre><code>cd /Library/Caches/Homebrew/
+wget --no-check-certificate https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
+brew upgrade lrzsz
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<pre><code>brew install lrzsz
+</code></pre><p>通过https下载的时候提示如下错误：</p>
+<pre><code>==&gt; Downloading http://www.ohse.de/uwe/releases/lrzsz-0.]]>
+    </summary>
+    
+      <category term="error" scheme="http://zobor.me/tags/error/"/>
+    
+      <category term="mac" scheme="http://zobor.me/tags/mac/"/>
+    
+      <category term="Mac" scheme="http://zobor.me/categories/Mac/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[html5 video如何判断直播流结束?]]></title>
