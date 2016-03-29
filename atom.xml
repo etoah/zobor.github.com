@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zobor.me//"/>
-  <updated>2016-01-12T06:54:34.000Z</updated>
+  <updated>2016-03-29T10:57:57.000Z</updated>
   <id>http://zobor.me//</id>
   
   <author>
@@ -16,12 +16,104 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[腾讯视频 HTML5 Player 快捷键一览表]]></title>
+    <link href="http://zobor.me/2016/03/28/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91HTML5Player%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%80%E8%A7%88%E8%A1%A8/"/>
+    <id>http://zobor.me/2016/03/28/腾讯视频HTML5Player快捷键一览表/</id>
+    <published>2016-03-28T12:51:19.000Z</published>
+    <updated>2016-03-29T10:57:57.000Z</updated>
+    <content type="html"><![CDATA[<table>
+<thead>
+<tr>
+<th>快捷键操作</th>
+<th>键盘快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>space</td>
+<td>暂停、播放</td>
+</tr>
+<tr>
+<td>K</td>
+<td>暂停、播放</td>
+</tr>
+<tr>
+<td>M</td>
+<td>静音、取消静音</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>音量+5</td>
+</tr>
+<tr>
+<td>↓</td>
+<td>音量-5</td>
+</tr>
+<tr>
+<td>←</td>
+<td>快退5秒</td>
+</tr>
+<tr>
+<td>→</td>
+<td>快进5秒</td>
+</tr>
+<tr>
+<td>J</td>
+<td>快退10秒</td>
+</tr>
+<tr>
+<td>L</td>
+<td>快进10秒</td>
+</tr>
+<tr>
+<td>F</td>
+<td>进入、退出系统全屏</td>
+</tr>
+<tr>
+<td>shift + F</td>
+<td>进入或退出浏览器全屏</td>
+</tr>
+<tr>
+<td>1-9</td>
+<td>跳转到影片长度的百分比位置，例如：按下5，跳转到视频的50%的时间点</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    <summary type="html">
+    <![CDATA[<table>
+<thead>
+<tr>
+<th>快捷键操作</th>
+<th>键盘快捷键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>space</td>
+<td>暂停、播放</td>
+</tr>
+<tr>
+<td>K</td>
+<td>暂停、播放]]>
+    </summary>
+    
+      <category term="HTML5" scheme="http://zobor.me/tags/HTML5/"/>
+    
+      <category term="腾讯视频" scheme="http://zobor.me/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/"/>
+    
+      <category term="前端开发" scheme="http://zobor.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Mac用Homebrew SSL证书错误]]></title>
     <link href="http://zobor.me/2016/01/12/Mac%E7%94%A8Homebrew-SSL%E8%AF%81%E4%B9%A6%E9%94%99%E8%AF%AF/"/>
     <id>http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/</id>
     <published>2016-01-12T06:50:27.000Z</published>
-    <updated>2016-01-12T06:54:34.000Z</updated>
-    <content type="html"><![CDATA[<pre><code>brew install lrzsz
+    <updated>2016-03-29T10:55:10.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://pic.yupoo.com/sinaweibo3872641400/Fr5xoBtN/medium.jpg" alt=""></p>
+<pre><code>brew install lrzsz
 </code></pre><p>通过https下载的时候提示如下错误：</p>
 <pre><code>==&gt; Downloading http://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
 ==&gt; Downloading from https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
@@ -51,9 +143,9 @@ wget --no-check-certificate https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
 brew upgrade lrzsz
 </code></pre>]]></content>
     <summary type="html">
-    <![CDATA[<pre><code>brew install lrzsz
-</code></pre><p>通过https下载的时候提示如下错误：</p>
-<pre><code>==&gt; Downloading http://www.ohse.de/uwe/releases/lrzsz-0.]]>
+    <![CDATA[<p><img src="http://pic.yupoo.com/sinaweibo3872641400/Fr5xoBtN/medium.jpg" alt=""></p>
+<pre><code>brew install lrzsz
+</code></pre><p>通过https]]>
     </summary>
     
       <category term="error" scheme="http://zobor.me/tags/error/"/>
