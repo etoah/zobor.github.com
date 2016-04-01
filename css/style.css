@@ -879,6 +879,9 @@ a.article-title:hover {
 }
 .article-entry code {
   font-family: Courier;
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 .article-entry iframe {
   border: none;

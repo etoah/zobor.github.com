@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   
-  <title><![CDATA[Zobor]]></title>
+  <title><![CDATA[前端开发|ZOBOR]]></title>
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zobor.me//"/>
-  <updated>2016-03-29T11:00:20.000Z</updated>
+  <updated>2016-04-01T06:21:31.000Z</updated>
   <id>http://zobor.me//</id>
   
   <author>
@@ -14,6 +14,97 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[android系统webview touch的兼容性总结]]></title>
+    <link href="http://zobor.me/2016/04/01/android%E7%B3%BB%E7%BB%9Fwebview-touch%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    <id>http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/</id>
+    <published>2016-04-01T05:39:46.000Z</published>
+    <updated>2016-04-01T06:21:31.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://pic.yupoo.com/sinaweibo3872641400/FrvNWrmG/medish.jpg" alt=""></p>
+<p>移动开发中经常是需要监听touchstart, touchmove, touchend, touchcancel，但是发现，安卓系统的webview如果在touchstart 或者 touchmove 中阻止默认行为，并不会触发touchend. IOS却没有这个问题。</p>
+<p>所以hack方法应运而生：</p>
+<p><strong>部分代码</strong></p>
+<pre><code>&lt;script src=&quot;http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js&quot;&gt;&lt;/script&gt;
+&lt;div id=&quot;swipeBox&quot; style=&quot;width:100px;height:100px;background:red;&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;indexLog&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var $box = tvp.$(&#39;#swipeBox&#39;);
+var touch = {};
+$box
+.on(&#39;touchstart&#39;, function(e){
+  e = e &amp;&amp; e.touches &amp;&amp; e.touches.length ? e.touches[0] : e;
+  touch.x1 = e.pageX;
+  touch.y1 = e.pageY;
+  touch.x2=0;
+  touch.x2=0;
+  // e.preventDefault();
+  // return false;
+})
+.on(&#39;touchmove&#39;, function(e){
+  e = (e &amp;&amp; e.touches &amp;&amp; e.touches.length) ? e.touches[0] : e;
+  touch.x2 = e.pageX;
+  touch.y2 = e.pageY;
+  var noMove = false;
+  // if (touch.x2){
+  //   noMove = true;
+  // }
+  if (touch.x2 &amp;&amp; Math.abs(touch.x1 - touch.x2)&gt;6 ){
+    noMove = true;
+    tvp.$(&#39;#indexLog&#39;).html([
+      touch.x1,
+      touch.y1,
+      touch.x2,
+      touch.y2
+    ].join(&#39;|&#39;)).css({
+      background: &#39;yellow&#39;
+    });
+    // return false;
+    // e.preventDefault();
+  }else{
+    tvp.$(&#39;#indexLog&#39;).html([
+      touch.x1,
+      touch.y1,
+      touch.x2,
+      touch.y2
+    ].join(&#39;|&#39;)).css({
+      background: &#39;green&#39;
+    });
+    noMove = false;
+  }
+  if (noMove) return false;
+})
+.on(&#39;touchend&#39;, function(e){
+  tvp.$(&#39;#indexLog&#39;).html([
+      touch.x1,
+      touch.y1,
+      touch.x2,
+      touch.y2
+    ].join(&#39;|&#39;)).css({
+      background: &#39;red&#39;
+    });
+});
+&lt;/script&gt;
+</code></pre><h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://code.google.com/p/android/issues/detail?id=19827" target="_blank" rel="external">WebView touchevents are not fired propperly if e.preventDefault() is not used on touchstart and touchmove</a></li>
+<li><a href="http://wilsonpage.co.uk/touch-events-in-chrome-android/" target="_blank" rel="external">Touch events in Chrome Android</a></li>
+</ul>
+<h2 id="u5B9E_u4F8BDEMO"><a href="#u5B9E_u4F8BDEMO" class="headerlink" title="实例DEMO"></a>实例DEMO</h2><ul>
+<li><a href="/pages/demos/android-touch.html">解决android需要preventDefault()才能触发touchend</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://pic.yupoo.com/sinaweibo3872641400/FrvNWrmG/medish.jpg" alt=""></p>
+<p>移动开发中经常是需要监听touchstart, touchmove, touchend, touch]]>
+    </summary>
+    
+      <category term="android" scheme="http://zobor.me/tags/android/"/>
+    
+      <category term="webview" scheme="http://zobor.me/tags/webview/"/>
+    
+      <category term="前端开发" scheme="http://zobor.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[腾讯视频 HTML5 Player 快捷键一览表]]></title>
