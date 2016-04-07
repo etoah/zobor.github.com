@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>前端开发|ZOBOR</title>
+  <title>Zobor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端开发,zobor,HTML5 HD Player">
+  <meta name="description" content="zobor">
 <meta property="og:type" content="website">
-<meta property="og:title" content="前端开发|ZOBOR">
+<meta property="og:title" content="Zobor">
 <meta property="og:url" content="http://zobor.me/index.html">
-<meta property="og:site_name" content="前端开发|ZOBOR">
-<meta property="og:description" content="前端开发,zobor,HTML5 HD Player">
+<meta property="og:site_name" content="Zobor">
+<meta property="og:description" content="zobor">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端开发|ZOBOR">
-<meta name="twitter:description" content="前端开发,zobor,HTML5 HD Player">
+<meta name="twitter:title" content="Zobor">
+<meta name="twitter:description" content="zobor">
   
   
     <link rel="shortcut icon" href="/images/default_avatar.jpg">
@@ -26,6 +26,7 @@
   
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/prettify/tomorrow-night-eighties.css">
   <script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
 
   
@@ -50,7 +51,7 @@ ga('send', 'pageview');
     <header id="header" class="print-invisible">
   <div id="header-main" class="header-inner">
     <div class="outer">
-      <a href="/" id="logo"><span class="site-title">前端开发|ZOBOR</span></a>
+      <a href="/" id="logo"><span class="site-title">Zobor</span></a>
       <nav id="main-nav">
         
           <a class="main-nav-link" href="/archives/">Archives</a>
@@ -107,11 +108,11 @@ ga('send', 'pageview');
     
     <div class="article-info profile-block">
       <div class="article-info-block">
-        10
+        11
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        14
+        17
         <span>tags</span>
       </div>
     </div>
@@ -145,6 +146,97 @@ ga('send', 'pageview');
 </aside>
       
       <section id="main">
+      <article id="post-xml2json-in-node-or-browser" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/xml2json-in-node-or-browser/">xml2json in node or browser</a>
+    </h1>
+  
+
+        
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+    <time datetime="2016-04-07T11:06:24.000Z" itemprop="datePublished">2016-04-07</time>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/前端开发/">前端开发</a>
+  </div>
+
+          
+
+          
+        </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <p><img src="http://www.oksgroup.com/wp-content/uploads/2014/01/banner-xml-inside.jpg" alt=""></p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p><code>xml</code></p>
+<pre><code class="prettyprint">&lt;div&gt;
+  &lt;p&gt;1&lt;/p&gt;
+  &lt;span&gt;2&lt;/span&gt;
+  &lt;a href=&quot;#&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;#2&quot;&gt;3&lt;/a&gt;
+  &lt;link&gt;&lt;![CDATA[http://imc.l.qq.com/click?oid=2610061&amp;cid=1350437&amp;adtype=WL&amp;soid=3B257D4600395704C87D09889300&amp;aver=0&amp;ev=37&amp;refluence=4002&amp;requestl=4002&amp;tagid=&amp;si=3430953226&amp;target=4002&amp;isfloatindex=0&amp;pf=H5&amp;loc=LV_1001_YDLDVi_LD&amp;click_data=dXNlcl9pbmZvPXZCVDJuVHN3SEJXNUZPT2RJem9WQzdvZV9KNDI=&amp;live=0&amp;aid_tpid=2&amp;aid_tpid2=1089&amp;aid_tpid3=10470&amp;aid_dura=2684&amp;aid_vid_drm=0&amp;aid_copyright=89&amp;aid_cover=e7hi6lep1yc51ca&amp;aid_subtype=1024_1048576_4&amp;aid_column=0]]&gt;&lt;/link&gt;
+&lt;/div&gt;
+</code></pre>
+<p><code>json</code></p>
+<pre><code class="prettyprint">{
+  &quot;div&quot;: {
+    &quot;p&quot;: &quot;1&quot;,
+    &quot;span&quot;: &quot;2&quot;,
+    &quot;a&quot;: [
+      &quot;&quot;,
+      &quot;3&quot;
+    ],
+    &quot;link&quot;: &quot;http://imc.l.qq.com/click?oid=2610061&amp;cid=1350437&amp;adtype=WL&amp;soid=3B257D4600…right=89&amp;aid_cover=e7hi6lep1yc51ca&amp;aid_subtype=1024_1048576_4&amp;aid_column=0&quot;
+  }
+}
+</code></pre>
+<ul>
+<li><a href="https://github.com/zobor/xml2json" target="_blank" rel="external">github源码</a></li>
+</ul>
+
+        
+
+        
+
+      
+    </div>
+    
+
+    
+
+    
+
+    <footer class="article-footer print-invisible">
+      <a data-url="http://zobor.me/2016/04/07/xml2json-in-node-or-browser/" data-id="cimq6qapi000s6aj1on0p3p9w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xml2json/">xml2json</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+<div class="print-invisible">
+  
+
+</div>
+
+
+    
       <article id="post-android系统webview-touch的兼容性总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -182,69 +274,16 @@ ga('send', 'pageview');
       
         <p><img src="http://pic.yupoo.com/sinaweibo3872641400/FrvNWrmG/medish.jpg" alt=""></p>
 <p>移动开发中经常是需要监听touchstart, touchmove, touchend, touchcancel，但是发现，安卓系统的webview如果在touchstart 或者 touchmove 中阻止默认行为，并不会触发touchend. IOS却没有这个问题。</p>
-<p>所以hack方法应运而生：</p>
-<p><strong>部分代码</strong></p>
-<pre><code>&lt;script src=&quot;http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;swipeBox&quot; style=&quot;width:100px;height:100px;background:red;&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;indexLog&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-var $box = tvp.$(&#39;#swipeBox&#39;);
-var touch = {};
-$box
-.on(&#39;touchstart&#39;, function(e){
-  e = e &amp;&amp; e.touches &amp;&amp; e.touches.length ? e.touches[0] : e;
-  touch.x1 = e.pageX;
-  touch.y1 = e.pageY;
-  touch.x2=0;
-  touch.x2=0;
-  // e.preventDefault();
-  // return false;
-})
-.on(&#39;touchmove&#39;, function(e){
-  e = (e &amp;&amp; e.touches &amp;&amp; e.touches.length) ? e.touches[0] : e;
-  touch.x2 = e.pageX;
-  touch.y2 = e.pageY;
-  var noMove = false;
-  // if (touch.x2){
-  //   noMove = true;
-  // }
-  if (touch.x2 &amp;&amp; Math.abs(touch.x1 - touch.x2)&gt;6 ){
-    noMove = true;
-    tvp.$(&#39;#indexLog&#39;).html([
-      touch.x1,
-      touch.y1,
-      touch.x2,
-      touch.y2
-    ].join(&#39;|&#39;)).css({
-      background: &#39;yellow&#39;
-    });
-    // return false;
-    // e.preventDefault();
-  }else{
-    tvp.$(&#39;#indexLog&#39;).html([
-      touch.x1,
-      touch.y1,
-      touch.x2,
-      touch.y2
-    ].join(&#39;|&#39;)).css({
-      background: &#39;green&#39;
-    });
-    noMove = false;
+<p>看看这段代码，判断是android设备，就在touchstart的时候preventDefault；</p>
+<pre><code class="prettyprint">element.addEventListener(&quot;touchstart&quot;, function(touchEvent) {
+  if( navigator.userAgent.match(/Android/i) ) {
+    touchEvent.preventDefault();
   }
-  if (noMove) return false;
-})
-.on(&#39;touchend&#39;, function(e){
-  tvp.$(&#39;#indexLog&#39;).html([
-      touch.x1,
-      touch.y1,
-      touch.x2,
-      touch.y2
-    ].join(&#39;|&#39;)).css({
-      background: &#39;red&#39;
-    });
-});
-&lt;/script&gt;
-</code></pre><h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><ul>
+}, false );
+</code></pre>
+<p>以为这么简单就解决了，no，你在element区域滑动页面试试，是不是不能滑动（别告诉我你的页面没有滚动条）。不要疑惑，preventDefault造成的。<br>android为了节省性能，监听滑动事件的时候，需要阻止默认的页面滑动行为。ios这点完胜。</p>
+<p>解决办法其实也有，看下面的demo吧</p>
+<h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="https://code.google.com/p/android/issues/detail?id=19827" target="_blank" rel="external">WebView touchevents are not fired propperly if e.preventDefault() is not used on touchstart and touchmove</a></li>
 <li><a href="http://wilsonpage.co.uk/touch-events-in-chrome-android/" target="_blank" rel="external">Touch events in Chrome Android</a></li>
 </ul>
@@ -265,7 +304,7 @@ $box
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/" data-id="cimhbosao001dqyj1qggpw91f" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/" data-id="cimq6qapt001m6aj1yuys5xah" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webview/">webview</a></li></ul>
@@ -400,7 +439,7 @@ $box
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2016/03/28/腾讯视频HTML5Player快捷键一览表/" data-id="cimhbosa9000fqyj104oy8ws5" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2016/03/28/腾讯视频HTML5Player快捷键一览表/" data-id="cimq6qape000g6aj1mfdh6qr9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/腾讯视频/">腾讯视频</a></li></ul>
@@ -494,7 +533,7 @@ brew upgrade lrzsz
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/" data-id="cimhbosar001jqyj1xik4ttiq" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/" data-id="cimq6qapu001s6aj1td8zak52" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/error/">error</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
@@ -568,7 +607,7 @@ brew upgrade lrzsz
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/" data-id="cimhbosaj0014qyj1603vh7cw" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/" data-id="cimq6qapp001d6aj1hqgabdpq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/">video</a></li></ul>
@@ -1231,7 +1270,7 @@ class Handlers {
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2015/06/30/html5开发之fiddler配置总结/" data-id="cimhbosah000yqyj124lwjq1f" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2015/06/30/html5开发之fiddler配置总结/" data-id="cimq6qapn00176aj18y21h6x3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fiddler/">fiddler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fiddlerscript/">fiddlerscript</a></li></ul>
@@ -1282,7 +1321,7 @@ class Handlers {
     <div class="article-entry" itemprop="articleBody">
       
       
-        <p><img src="http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1OUtQQmczTy90VDYwbWZkK3A3R05zYTQvMElBWXRwVjhBPT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"><br>测试环境：<br>Mac: 10.10.3<br>Safari: 8.0.5<br>video format: mp4</p>
+        <p>测试环境：<br>Mac: 10.10.3<br>Safari: 8.0.5<br>video format: mp4</p>
 <hr>
 <p>youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧。<br>测试发现，safari的onprogress比较鸡肋，根本不是标准的。只有视频全部cache完才会触发，靠onprogress来设计控制栏已经不能简单兼容多浏览器了。</p>
 <p>同属webkit，safari，你不羞耻吗？<br>官方的文档里的demo，视频还没发播（Http/1.1 Service Unavailable），这么大的厂，不忍直视。。。<br>其实，没有progress，我们可以用timeupdate + setInterval，切记做好性能优化。其实也是可以实现的。</p>
@@ -1314,7 +1353,7 @@ class Handlers {
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2015/06/17/说说safari的onprogress/" data-id="cimhbosa20004qyj1gs6ui84k" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2015/06/17/说说safari的onprogress/" data-id="cimq6qap700056aj1ewl91abr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/safari/">safari</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/">video</a></li></ul>
@@ -1380,7 +1419,7 @@ class Handlers {
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2015/05/30/hello-zobor/" data-id="cimhbosam0018qyj13tr9oz7h" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2015/05/30/hello-zobor/" data-id="cimq6qapr001h6aj1bz9qvz0y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
@@ -1504,7 +1543,7 @@ class Handlers {
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2014/12/14/web设备UA统计/" data-id="cimhbosae000rqyj1bfyf57zb" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2014/12/14/web设备UA统计/" data-id="cimq6qapj00106aj17t5725rb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
@@ -2185,7 +2224,7 @@ class Handlers {
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/" data-id="cimhbosaf000uqyj16spzkse3" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/" data-id="cimq6qapl00136aj1zmhp0n00" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/">video</a></li></ul>
@@ -2201,85 +2240,9 @@ class Handlers {
 
 
     
-      <article id="post-杀掉指定端口的node进程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/03/杀掉指定端口的node进程/">杀掉指定端口的node进程</a>
-    </h1>
-  
-
-        
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-    <time datetime="2014-09-03T09:40:33.000Z" itemprop="datePublished">2014-09-03</time>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/前端开发/">前端开发</a>
-  </div>
-
-          
-
-          
-        </div>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        <p><img src="http://imglf0.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1NFlhSUM4YmxSQitFUzJuTEJxb0lyN05WcngyR0NyZkd3PT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"></p>
-<p>通常有多个node进程运行时，需要停掉其中一个，这段代码应该可以帮助你。</p>
-<pre><code class="shell">#!/bin/bash
-if [[ $1 = &quot;&quot; ]];then
-    echo &quot;Usage: $0 port&quot;
-    exit 8
-fi
-id=$(netstat -nutlp | grep $1 | awk -F&#39;[ /]+&#39; &#39;{print $7}&#39;)
-prog=$(netstat -nutlp | grep $1 | awk -F&#39;[ /]+&#39; &#39;{print $8}&#39;)
-if [ $prog = &quot;node&quot; ];then
-    kill $id &amp;&amp; echo &quot;stop node is successfully.&quot;
-else
-    echo &quot;not found node process.&quot;
-fi
-</code></pre>
-
-        
-
-        
-
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2014/09/03/杀掉指定端口的node进程/" data-id="cimhbosac000lqyj1wjdiacpl" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-<div class="print-invisible">
-  
-
-</div>
-
-
+      <nav id="page-nav">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      </nav>
     </section>
       
         <aside id="sidebar" class="print-invisible">
@@ -2289,6 +2252,24 @@ fi
     <h3 class="widget-title">recents</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/04/07/xml2json-in-node-or-browser/" class="thumbnail">
+  
+    <span style="background-image:url(http://images.cnitblog.com/blog/573806/201402/242047004505006.png)" alt="xml2json in node or browser" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              
+              <p class="item-title"><a href="/2016/04/07/xml2json-in-node-or-browser/" class="title">xml2json in node or browser</a></p>
+              <p class="item-category"><a class="article-category-link" href="/categories/前端开发/">前端开发</a></p>
+              <p class="item-date"><time datetime="2016-04-07T11:06:24.000Z" itemprop="datePublished">2016-04-07</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -2362,24 +2343,6 @@ fi
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/06/30/html5开发之fiddler配置总结/" class="thumbnail">
-  
-    <span style="background-image:url(http://imglf0.nosdn.127.net/img/SW5VVnJZRTBwMm1VTEdwdC9tZFg1V0J2U244dTBRUTc4ZjVjZURNU3BWRUo5UjdNdm9yN2VRPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg)" alt="html5开发之fiddler配置总结" class="thumbnail-image"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              
-              <p class="item-title"><a href="/2015/06/30/html5开发之fiddler配置总结/" class="title">html5开发之fiddler配置总结</a></p>
-              <p class="item-category"><a class="article-category-link" href="/categories/前端开发/">前端开发</a></p>
-              <p class="item-date"><time datetime="2015-06-30T12:22:50.000Z" itemprop="datePublished">2015-06-30</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -2389,7 +2352,7 @@ fi
   <div class="widget-wrap">
     <h3 class="widget-title">archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -2398,7 +2361,7 @@ fi
   <div class="widget-wrap">
     <h3 class="widget-title">categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/">前端开发</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/扯淡/">扯淡</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/">前端开发</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/扯淡/">扯淡</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -2463,6 +2426,12 @@ $("span.heimu").attr("title", "你知道的太多了")
 
 
 <script src="/js/script.js" type="text/javascript"></script>
+
+<script src="/prettify/prettify.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+prettyPrint();
+</script>
 
   </div>
 </body>

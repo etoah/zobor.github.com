@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   
-  <title><![CDATA[前端开发|ZOBOR]]></title>
+  <title><![CDATA[Zobor]]></title>
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zobor.me//"/>
-  <updated>2016-04-01T06:21:31.000Z</updated>
+  <updated>2016-04-07T11:11:49.000Z</updated>
   <id>http://zobor.me//</id>
   
   <author>
@@ -16,76 +16,71 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[xml2json in node or browser]]></title>
+    <link href="http://zobor.me/2016/04/07/xml2json-in-node-or-browser/"/>
+    <id>http://zobor.me/2016/04/07/xml2json-in-node-or-browser/</id>
+    <published>2016-04-07T11:06:24.000Z</published>
+    <updated>2016-04-07T11:11:49.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://www.oksgroup.com/wp-content/uploads/2014/01/banner-xml-inside.jpg" alt=""></p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p><code>xml</code></p>
+<pre><code class="prettyprint">&lt;div&gt;
+  &lt;p&gt;1&lt;/p&gt;
+  &lt;span&gt;2&lt;/span&gt;
+  &lt;a href=&quot;#&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;#2&quot;&gt;3&lt;/a&gt;
+  &lt;link&gt;&lt;![CDATA[http://imc.l.qq.com/click?oid=2610061&amp;cid=1350437&amp;adtype=WL&amp;soid=3B257D4600395704C87D09889300&amp;aver=0&amp;ev=37&amp;refluence=4002&amp;requestl=4002&amp;tagid=&amp;si=3430953226&amp;target=4002&amp;isfloatindex=0&amp;pf=H5&amp;loc=LV_1001_YDLDVi_LD&amp;click_data=dXNlcl9pbmZvPXZCVDJuVHN3SEJXNUZPT2RJem9WQzdvZV9KNDI=&amp;live=0&amp;aid_tpid=2&amp;aid_tpid2=1089&amp;aid_tpid3=10470&amp;aid_dura=2684&amp;aid_vid_drm=0&amp;aid_copyright=89&amp;aid_cover=e7hi6lep1yc51ca&amp;aid_subtype=1024_1048576_4&amp;aid_column=0]]&gt;&lt;/link&gt;
+&lt;/div&gt;
+</code></pre>
+<p><code>json</code></p>
+<pre><code class="prettyprint">{
+  &quot;div&quot;: {
+    &quot;p&quot;: &quot;1&quot;,
+    &quot;span&quot;: &quot;2&quot;,
+    &quot;a&quot;: [
+      &quot;&quot;,
+      &quot;3&quot;
+    ],
+    &quot;link&quot;: &quot;http://imc.l.qq.com/click?oid=2610061&amp;cid=1350437&amp;adtype=WL&amp;soid=3B257D4600…right=89&amp;aid_cover=e7hi6lep1yc51ca&amp;aid_subtype=1024_1048576_4&amp;aid_column=0&quot;
+  }
+}
+</code></pre>
+<ul>
+<li><a href="https://github.com/zobor/xml2json" target="_blank" rel="external">github源码</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="http://www.oksgroup.com/wp-content/uploads/2014/01/banner-xml-inside.jpg" alt=""></p>
+<h3 id="Example"><a href="#Example" class]]>
+    </summary>
+    
+      <category term="node" scheme="http://zobor.me/tags/node/"/>
+    
+      <category term="xml2json" scheme="http://zobor.me/tags/xml2json/"/>
+    
+      <category term="前端开发" scheme="http://zobor.me/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="前端开发" scheme="http://zobor.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[android系统webview touch的兼容性总结]]></title>
     <link href="http://zobor.me/2016/04/01/android%E7%B3%BB%E7%BB%9Fwebview-touch%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E6%80%BB%E7%BB%93/"/>
     <id>http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/</id>
     <published>2016-04-01T05:39:46.000Z</published>
-    <updated>2016-04-01T06:21:31.000Z</updated>
+    <updated>2016-04-06T14:42:47.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://pic.yupoo.com/sinaweibo3872641400/FrvNWrmG/medish.jpg" alt=""></p>
 <p>移动开发中经常是需要监听touchstart, touchmove, touchend, touchcancel，但是发现，安卓系统的webview如果在touchstart 或者 touchmove 中阻止默认行为，并不会触发touchend. IOS却没有这个问题。</p>
-<p>所以hack方法应运而生：</p>
-<p><strong>部分代码</strong></p>
-<pre><code>&lt;script src=&quot;http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js&quot;&gt;&lt;/script&gt;
-&lt;div id=&quot;swipeBox&quot; style=&quot;width:100px;height:100px;background:red;&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;indexLog&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
-var $box = tvp.$(&#39;#swipeBox&#39;);
-var touch = {};
-$box
-.on(&#39;touchstart&#39;, function(e){
-  e = e &amp;&amp; e.touches &amp;&amp; e.touches.length ? e.touches[0] : e;
-  touch.x1 = e.pageX;
-  touch.y1 = e.pageY;
-  touch.x2=0;
-  touch.x2=0;
-  // e.preventDefault();
-  // return false;
-})
-.on(&#39;touchmove&#39;, function(e){
-  e = (e &amp;&amp; e.touches &amp;&amp; e.touches.length) ? e.touches[0] : e;
-  touch.x2 = e.pageX;
-  touch.y2 = e.pageY;
-  var noMove = false;
-  // if (touch.x2){
-  //   noMove = true;
-  // }
-  if (touch.x2 &amp;&amp; Math.abs(touch.x1 - touch.x2)&gt;6 ){
-    noMove = true;
-    tvp.$(&#39;#indexLog&#39;).html([
-      touch.x1,
-      touch.y1,
-      touch.x2,
-      touch.y2
-    ].join(&#39;|&#39;)).css({
-      background: &#39;yellow&#39;
-    });
-    // return false;
-    // e.preventDefault();
-  }else{
-    tvp.$(&#39;#indexLog&#39;).html([
-      touch.x1,
-      touch.y1,
-      touch.x2,
-      touch.y2
-    ].join(&#39;|&#39;)).css({
-      background: &#39;green&#39;
-    });
-    noMove = false;
+<p>看看这段代码，判断是android设备，就在touchstart的时候preventDefault；</p>
+<pre><code class="prettyprint">element.addEventListener(&quot;touchstart&quot;, function(touchEvent) {
+  if( navigator.userAgent.match(/Android/i) ) {
+    touchEvent.preventDefault();
   }
-  if (noMove) return false;
-})
-.on(&#39;touchend&#39;, function(e){
-  tvp.$(&#39;#indexLog&#39;).html([
-      touch.x1,
-      touch.y1,
-      touch.x2,
-      touch.y2
-    ].join(&#39;|&#39;)).css({
-      background: &#39;red&#39;
-    });
-});
-&lt;/script&gt;
-</code></pre><h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><ul>
+}, false );
+</code></pre>
+<p>以为这么简单就解决了，no，你在element区域滑动页面试试，是不是不能滑动（别告诉我你的页面没有滚动条）。不要疑惑，preventDefault造成的。<br>android为了节省性能，监听滑动事件的时候，需要阻止默认的页面滑动行为。ios这点完胜。</p>
+<p>解决办法其实也有，看下面的demo吧</p>
+<h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="https://code.google.com/p/android/issues/detail?id=19827" target="_blank" rel="external">WebView touchevents are not fired propperly if e.preventDefault() is not used on touchstart and touchmove</a></li>
 <li><a href="http://wilsonpage.co.uk/touch-events-in-chrome-android/" target="_blank" rel="external">Touch events in Chrome Android</a></li>
 </ul>
@@ -909,8 +904,8 @@ class Handlers {
     <link href="http://zobor.me/2015/06/17/%E8%AF%B4%E8%AF%B4safari%E7%9A%84onprogress/"/>
     <id>http://zobor.me/2015/06/17/说说safari的onprogress/</id>
     <published>2015-06-17T13:51:55.000Z</published>
-    <updated>2015-12-25T05:07:06.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1OUtQQmczTy90VDYwbWZkK3A3R05zYTQvMElBWXRwVjhBPT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"><br>测试环境：<br>Mac: 10.10.3<br>Safari: 8.0.5<br>video format: mp4</p>
+    <updated>2016-04-07T11:12:07.000Z</updated>
+    <content type="html"><![CDATA[<p>测试环境：<br>Mac: 10.10.3<br>Safari: 8.0.5<br>video format: mp4</p>
 <hr>
 <p>youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧。<br>测试发现，safari的onprogress比较鸡肋，根本不是标准的。只有视频全部cache完才会触发，靠onprogress来设计控制栏已经不能简单兼容多浏览器了。</p>
 <p>同属webkit，safari，你不羞耻吗？<br>官方的文档里的demo，视频还没发播（Http/1.1 Service Unavailable），这么大的厂，不忍直视。。。<br>其实，没有progress，我们可以用timeupdate + setInterval，切记做好性能优化。其实也是可以实现的。</p>
@@ -930,7 +925,9 @@ class Handlers {
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><img src="http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1OUtQQmczTy90VDYwbWZkK3A3R05zYTQvMElBWXRwVjhBPT0.png?imageView&amp;th]]>
+    <![CDATA[<p>测试环境：<br>Mac: 10.10.3<br>Safari: 8.0.5<br>video format: mp4</p>
+<hr>
+<p>youtube已经使用html5播放视频很久了，咱们也不能落后太多吧。想必大家也是认为html5 video才是web视频的未来吧]]>
     </summary>
     
       <category term="html5" scheme="http://zobor.me/tags/html5/"/>
