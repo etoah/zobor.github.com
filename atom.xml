@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zobor.me//"/>
-  <updated>2016-04-17T04:32:33.000Z</updated>
+  <updated>2016-04-18T06:20:15.000Z</updated>
   <id>http://zobor.me//</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[xml2json in node or browser]]></title>
+    <title><![CDATA[xml2json in Node.js or browser]]></title>
     <link href="http://zobor.me/2016/04/07/xml2json-in-node-or-browser/"/>
     <id>http://zobor.me/2016/04/07/xml2json-in-node-or-browser/</id>
     <published>2016-04-07T11:06:24.000Z</published>
-    <updated>2016-04-17T04:32:33.000Z</updated>
+    <updated>2016-04-18T06:20:15.000Z</updated>
     <content type="html"><![CDATA[<p><img src="http://www.oksgroup.com/wp-content/uploads/2014/01/banner-xml-inside.jpg" alt=""></p>
 <h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><p><code>xml</code></p>
 <pre><code class="prettyprint">&lt;div&gt;
@@ -53,7 +53,7 @@
 <h3 id="Example"><a href="#Example" class]]>
     </summary>
     
-      <category term="node" scheme="http://zobor.me/tags/node/"/>
+      <category term="Node.js" scheme="http://zobor.me/tags/Node-js/"/>
     
       <category term="xml2json" scheme="http://zobor.me/tags/xml2json/"/>
     
@@ -962,6 +962,512 @@ class Handlers {
   </entry>
   
   <entry>
+    <title><![CDATA[用yii搭建一个网站--入门]]></title>
+    <link href="http://zobor.me/2015/05/18/%E7%94%A8yii%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99-%E5%85%A5%E9%97%A8/"/>
+    <id>http://zobor.me/2015/05/18/用yii搭建一个网站-入门/</id>
+    <published>2015-05-18T09:34:39.000Z</published>
+    <updated>2016-04-18T09:37:45.000Z</updated>
+    <content type="html"><![CDATA[<p>官方网站：<a href="http://www.yiiframework.com/" target="_blank" rel="external">http://www.yiiframework.com/</a><br>网站目录：F:\dropbox\public_html</p>
+<p>解压yii源码，将framework文件夹copy到 F:\dropbox\public_html</p>
+<pre><code class="prettyprint">shell&gt;&gt; F:
+shell&gt;&gt; cd dropbox\public_html
+</code></pre>
+<p>自动生成站点（lab）目录及文件：</p>
+<pre><code class="prettyprint">shell&gt;&gt; php framework/yiic.php webapp lab
+shell&gt;&gt; ls
+framework  lab
+shell&gt;&gt; cd lab\proceted
+</code></pre>
+<p>进入yii shell：</p>
+<pre><code class="prettyprint">shell&gt;&gt; yiic shell ../index.php
+Yii Interactive Tool v1.1 (based on Yii v1.1.10)
+Please type &#39;help&#39; for help. Type &#39;exit&#39; to quit.
+&gt;&gt;
+shell&gt;&gt; help
+At the prompt, you may enter a PHP statement or one of the following commands:
+ - controller
+ - crud
+ - form
+ - help
+ - model
+ - module
+
+Type &#39;help &lt;command-name&gt;&#39; for details about a command.
+
+To expand the above command list, place your command class files
+under &#39;protected/commands/shell&#39;, or a directory specified
+by the &#39;YIIC_SHELL_COMMAND_PATH&#39; environment variable. The command class
+must extend from CConsoleCommand.
+新建模块（user）module：
+shell&gt;&gt; module user
+    mkdir F:/Dropbox/public_html/yii/lab/protected/modules
+    mkdir F:/Dropbox/public_html/yii/lab/protected/modules/user
+    mkdir F:/Dropbox/public_html/yii/lab/protected/modules/user/components
+    mkdir F:/Dropbox/public_html/yii/lab/protected/modules/user/controllers
+   generate controllers/DefaultController.php
+    mkdir F:/Dropbox/public_html/yii/lab/protected/modules/user/messages
+    mkdir F:/Dropbox/public_html/yii/lab/protected/modules/user/models
+    mkdir F:/Dropbox/public_html/yii/lab/protected/modules/user/views
+    mkdir F:/Dropbox/public_html/yii/lab/protected/modules/user/views/default
+   generate views/default/index.php
+    mkdir F:/Dropbox/public_html/yii/lab/protected/modules/user/views/layouts
+   generate UserModule.php
+
+Module &#39;user&#39; has been created under the following folder:
+  F:\Dropbox\public_html\yii\lab\protected\modules\user
+
+You may access it in the browser using the following URL:
+  http://hostname/path/to/index.php?r=user
+
+Note, the module needs to be installed first by adding &#39;user&#39;
+to the &#39;modules&#39; property in the application configuration.
+新建模型model:
+shell&gt;&gt; help model
+USAGE
+  model &lt;class-name&gt; [table-name]
+
+DESCRIPTION
+  This command generates a model class with the specified class name.
+
+PARAMETERS
+ * class-name: required, model class name. By default, the generated
+   model class file will be placed under the directory aliased as
+   &#39;application.models&#39;. To override this default, specify the class
+   name in terms of a path alias, e.g., &#39;application.somewhere.ClassName&#39;.
+
+   If the model class belongs to a module, it should be specified
+   as &#39;ModuleID.models.ClassName&#39;.
+
+   If the class name ends with &#39;*&#39;, then a model class will be generated
+   for EVERY table in the database.
+
+   If the class name contains a regular expression deliminated by slashes,
+   then a model class will be generated for those tables whose name
+   matches the regular expression. If the regular expression contains
+   sub-patterns, the first sub-pattern will be used to generate the model
+   class name.
+
+ * table-name: optional, the associated database table name. If not given,
+   it is assumed to be the model class name.
+
+   Note, when the class name ends with &#39;*&#39;, this parameter will be
+   ignored.
+
+EXAMPLES
+ * Generates the Post model:
+      model Post
+
+ * Generates the Post model which is associated with table &#39;posts&#39;:
+      model Post posts
+
+ * Generates the Post model which should belong to module &#39;admin&#39;:
+      model admin.models.Post
+
+ * Generates a model class for every table in the current database:
+      model *
+
+ * Same as above, but the model class files should be generated
+   under &#39;protected/models2&#39;:
+      model application.models2.*
+
+ * Generates a model class for every table whose name is prefixed
+   with &#39;tbl_&#39; in the current database. The model class will not
+   contain the table prefix.
+      model /^tbl_(.*)$/
+
+ * Same as above, but the model class files should be generated
+   under &#39;protected/models2&#39;:
+      model application.models2./^tbl_(.*)$/
+</code></pre>
+<p>注：模型用shell还没搞定，shell到此。接下来用gii来新建模型</p>
+<pre><code class="prettyprint">shell&gt;&gt; vim protected/config/main.php
+&#39;gii&#39;=&gt;array(
+       &#39;class&#39;=&gt;&#39;system.gii.GiiModule&#39;,
+       &#39;password&#39;=&gt;&#39;123456&#39;,
+          // If removed, Gii defaults to localhost only. Edit carefully to taste.
+       &#39;ipFilters&#39;=&gt;array(&#39;127.0.0.1&#39;,&#39;127.0.0.5&#39;,&#39;::1&#39;),
+     ),
+</code></pre>
+<p>‘user’,//模块都得在这里设置下<br>设置域名和密码就可以了，浏览器打开：<br><a href="http://127.0.0.5/public_html/lab/index.php?r=gii/default/login" target="_blank" rel="external">http://127.0.0.5/public_html/lab/index.php?r=gii/default/login</a><br>输入密码：123456<br>点击“Model Generator”<br>填写相关参数即可~~~</p>
+<pre><code class="prettyprint">shell&gt;&gt; vim protected\modules\user\controllers\DefaultController.php
+</code></pre>
+<p>修改actionIndex:</p>
+<pre><code class="prettyprint">$u =new User();
+$list = $u-&gt;findAll();
+var_dump($list);
+</code></pre>
+<p>打开<a href="http://127.0.0.5/public_html/lab/index.php?r=user" target="_blank" rel="external">http://127.0.0.5/public_html/lab/index.php?r=user</a><br>OK~~~</p>
+<pre><code>ERROR:
+CDbConnection failed to open the DB connection: could not find driver
+
+resolve:php缺少pdo_mysql拓展
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>官方网站：<a href="http://www.yiiframework.com/" target="_blank" rel="external">http://www.yiiframework.com/</a><br>网站目录：F:\dropbox\public_htm]]>
+    </summary>
+    
+      <category term="PHP" scheme="http://zobor.me/tags/PHP/"/>
+    
+      <category term="Yii" scheme="http://zobor.me/tags/Yii/"/>
+    
+      <category term="前端开发" scheme="http://zobor.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[MongoDb命令--入门]]></title>
+    <link href="http://zobor.me/2015/04/18/MongoDb%E5%91%BD%E4%BB%A4-%E5%85%A5%E9%97%A8/"/>
+    <id>http://zobor.me/2015/04/18/MongoDb命令-入门/</id>
+    <published>2015-04-18T09:29:40.000Z</published>
+    <updated>2016-04-18T09:32:54.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u542F_u52A8_u548C_u9274_u6743_u767B_u5F55"><a href="#u542F_u52A8_u548C_u9274_u6743_u767B_u5F55" class="headerlink" title="启动和鉴权登录"></a>启动和鉴权登录</h2><pre><code class="prettyprint">C:\Documents and Settings\Administrator&gt;mongo
+MongoDB shell version: 1.8.1
+connecting to: test
+&gt; use admin
+switched to db admin
+&gt; db.auth(&#39;root&#39;,123456)
+1
+&gt; show dbs
+admin   0.03125GB
+kisscss 0.03125GB
+local   (empty)
+platform      0.03125GB
+testdb  0.03125GB
+&gt; use kisscss
+switched to db kisscss
+&gt; show tables
+a
+foo
+system.indexes
+system.users
+&gt; show collections
+a
+foo
+system.indexes
+system.users
+&gt; db.addUser(&#39;root&#39;,111111)
+{
+      &quot;user&quot; : &quot;root&quot;,
+      &quot;readOnly&quot; : false,
+      &quot;pwd&quot; : &quot;2235ba5209b51a08f63d99b39281c45a&quot;
+}
+</code></pre>
+<h2 id="CRUD"><a href="#CRUD" class="headerlink" title="CRUD"></a>CRUD</h2><p>CRUD是指在做计算处理时的增加(Create)、查询(Retrieve)（重新得到数据）、更新(Update)和删除(Delete)几个单词的首字母简写</p>
+<pre><code class="prettyprint">&gt; use kisscss
+switched to db kisscss
+&gt; db.dropDatabase()
+{ &quot;dropped&quot; : &quot;kisscss&quot;, &quot;ok&quot; : 1 }
+&gt; db.peoples.insert({name:&#39;zhangheng&#39;,age:25})
+
+&gt; db.peoples.find()
+{ &quot;_id&quot; : ObjectId(&quot;504071bf47dcb049fdb047ed&quot;), &quot;name&quot; : &quot;zhangheng&quot;, &quot;age&quot; : 25 }
+&gt; db.peoples.ensureIndex({name:1},{unique:true})
+&gt; db.system.indexes.find()
+{ &quot;name&quot; : &quot;_id_&quot;, &quot;ns&quot; : &quot;java.user&quot;, &quot;key&quot; : { &quot;_id&quot; : 1 }, &quot;v&quot; : 0 }
+{ &quot;name&quot; : &quot;_id_&quot;, &quot;ns&quot; : &quot;java.peoples&quot;, &quot;key&quot; : { &quot;_id&quot; : 1 }, &quot;v&quot; : 0 }
+{ &quot;_id&quot; : ObjectId(&quot;5040721747dcb049fdb047ee&quot;), &quot;ns&quot; : &quot;java.peoples&quot;, &quot;key&quot; : { &quot;name&quot; : 1 }, &quot;name&quot; : &quot;name_1&quot;, &quot;unique&quot; : true, &quot;v&quot; : 0 }
+&gt; db.peoples.insert({name:&#39;zhangheng&#39;})
+E11000 duplicate key error index: java.peoples.$name_1  dup key: { : &quot;zhangheng&quot; }
+
+&gt; db.peoples.find({name:&#39;zhang&#39;})
+{ &quot;_id&quot; : ObjectId(&quot;504074a347dcb049fdb047f4&quot;), &quot;name&quot; : &quot;zhang&quot;, &quot;age&quot; : 30 }
+&gt; db.peoples.find()
+{ &quot;_id&quot; : ObjectId(&quot;504071bf47dcb049fdb047ed&quot;), &quot;name&quot; : &quot;zhangheng&quot;, &quot;age&quot; : 25 }
+{ &quot;_id&quot; : ObjectId(&quot;504074a347dcb049fdb047f4&quot;), &quot;name&quot; : &quot;zhang&quot;, &quot;age&quot; : 30 }
+{ &quot;_id&quot; : ObjectId(&quot;5040759a47dcb049fdb047f5&quot;), &quot;name&quot; : &quot;zhangh&quot;, &quot;age&quot; : 100 }
+{ &quot;_id&quot; : ObjectId(&quot;504075ac47dcb049fdb047f6&quot;), &quot;name&quot; : &quot;ZHANGHENG&quot;, &quot;age&quot; : 50 }
+{ &quot;_id&quot; : ObjectId(&quot;5040760b47dcb049fdb047f7&quot;), &quot;name&quot; : &quot;kisscss&quot;, &quot;age&quot; : 60 }
+&gt; db.peoples.find({age:{$gt:50,$lt:100}})
+{ &quot;_id&quot; : ObjectId(&quot;5040760b47dcb049fdb047f7&quot;), &quot;name&quot; : &quot;kisscss&quot;, &quot;age&quot; : 60 }
+&gt; var jsfun = function(){ return this.name.indexOf(&#39;zhang&#39;)!= -1; }
+&gt; db.peoples.find({$where:jsfun})
+{ &quot;_id&quot; : ObjectId(&quot;504071bf47dcb049fdb047ed&quot;), &quot;name&quot; : &quot;zhangheng&quot;, &quot;age&quot; : 25 }
+{ &quot;_id&quot; : ObjectId(&quot;504074a347dcb049fdb047f4&quot;), &quot;name&quot; : &quot;zhang&quot;, &quot;age&quot; : 30 }
+{ &quot;_id&quot; : ObjectId(&quot;5040759a47dcb049fdb047f5&quot;), &quot;name&quot; : &quot;zhangh&quot;, &quot;age&quot; : 100 }
+&gt; db.peoples.find({name:/.*zhang.*/})
+{ &quot;_id&quot; : ObjectId(&quot;504074a347dcb049fdb047f4&quot;), &quot;name&quot; : &quot;zhang&quot;, &quot;age&quot; : 30 }
+{ &quot;_id&quot; : ObjectId(&quot;5040759a47dcb049fdb047f5&quot;), &quot;name&quot; : &quot;zhangh&quot;, &quot;age&quot; : 100 }
+{ &quot;_id&quot; : ObjectId(&quot;504071bf47dcb049fdb047ed&quot;), &quot;name&quot; : &quot;zhangheng&quot;, &quot;age&quot; : 25 }
+
+&gt; db.peoples.find()
+{ &quot;_id&quot; : ObjectId(&quot;504071bf47dcb049fdb047ed&quot;), &quot;name&quot; : &quot;zhangheng&quot;, &quot;age&quot; : 25 }
+{ &quot;_id&quot; : ObjectId(&quot;504074a347dcb049fdb047f4&quot;), &quot;name&quot; : &quot;zhang&quot;, &quot;age&quot; : 30 }
+{ &quot;_id&quot; : ObjectId(&quot;5040759a47dcb049fdb047f5&quot;), &quot;name&quot; : &quot;zhangh&quot;, &quot;age&quot; : 100 }
+{ &quot;_id&quot; : ObjectId(&quot;504075ac47dcb049fdb047f6&quot;), &quot;name&quot; : &quot;ZHANGHENG&quot;, &quot;age&quot; : 50 }
+{ &quot;_id&quot; : ObjectId(&quot;5040760b47dcb049fdb047f7&quot;), &quot;name&quot; : &quot;kisscss&quot;, &quot;age&quot; : 60 }
+&gt; db.peoples.update({name:&#39;arvin&#39;},{age:32},false)
+&gt; db.peoples.find()
+{ &quot;_id&quot; : ObjectId(&quot;504071bf47dcb049fdb047ed&quot;), &quot;name&quot; : &quot;zhangheng&quot;, &quot;age&quot; : 25 }
+{ &quot;_id&quot; : ObjectId(&quot;504074a347dcb049fdb047f4&quot;), &quot;name&quot; : &quot;zhang&quot;, &quot;age&quot; : 30 }
+{ &quot;_id&quot; : ObjectId(&quot;5040759a47dcb049fdb047f5&quot;), &quot;name&quot; : &quot;zhangh&quot;, &quot;age&quot; : 100 }
+{ &quot;_id&quot; : ObjectId(&quot;504075ac47dcb049fdb047f6&quot;), &quot;name&quot; : &quot;ZHANGHENG&quot;, &quot;age&quot; : 50 }
+{ &quot;_id&quot; : ObjectId(&quot;5040760b47dcb049fdb047f7&quot;), &quot;name&quot; : &quot;kisscss&quot;, &quot;age&quot; : 60 }
+&gt; db.peoples.update({name:&#39;arvin&#39;},{age:32},true)
+&gt; db.peoples.find()
+{ &quot;_id&quot; : ObjectId(&quot;504071bf47dcb049fdb047ed&quot;), &quot;name&quot; : &quot;zhangheng&quot;, &quot;age&quot; : 25 }
+{ &quot;_id&quot; : ObjectId(&quot;504074a347dcb049fdb047f4&quot;), &quot;name&quot; : &quot;zhang&quot;, &quot;age&quot; : 30 }
+{ &quot;_id&quot; : ObjectId(&quot;5040759a47dcb049fdb047f5&quot;), &quot;name&quot; : &quot;zhangh&quot;, &quot;age&quot; : 100 }
+{ &quot;_id&quot; : ObjectId(&quot;504075ac47dcb049fdb047f6&quot;), &quot;name&quot; : &quot;ZHANGHENG&quot;, &quot;age&quot; : 50 }
+{ &quot;_id&quot; : ObjectId(&quot;5040760b47dcb049fdb047f7&quot;), &quot;name&quot; : &quot;kisscss&quot;, &quot;age&quot; : 60 }
+{ &quot;_id&quot; : ObjectId(&quot;50407799cf84312a7594d350&quot;), &quot;age&quot; : 32 }
+</code></pre>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="u542F_u52A8_u548C_u9274_u6743_u767B_u5F55"><a href="#u542F_u52A8_u548C_u9274_u6743_u767B_u5F55" class="headerlink" title="启动和鉴权登录"><]]>
+    </summary>
+    
+      <category term="MongoDB" scheme="http://zobor.me/tags/MongoDB/"/>
+    
+      <category term="数据库" scheme="http://zobor.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[常用的mysql语句--入门]]></title>
+    <link href="http://zobor.me/2015/04/18/%E5%B8%B8%E7%94%A8%E7%9A%84mysql%E8%AF%AD%E5%8F%A5-%E5%85%A5%E9%97%A8/"/>
+    <id>http://zobor.me/2015/04/18/常用的mysql语句-入门/</id>
+    <published>2015-04-18T09:19:33.000Z</published>
+    <updated>2016-04-18T09:28:47.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="@_u5217_u51FA_u6240_u6709_u7684_u6570_u636E_u5E93"><a href="#@_u5217_u51FA_u6240_u6709_u7684_u6570_u636E_u5E93" class="headerlink" title="@列出所有的数据库"></a>@列出所有的数据库</h2><pre><code class="prettyprint">mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| java               |
+| kisscss_wp         |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+</code></pre>
+<h2 id="@_u521B_u5EFA_u6570_u636E_u5E93"><a href="#@_u521B_u5EFA_u6570_u636E_u5E93" class="headerlink" title="@创建数据库"></a>@创建数据库</h2><pre><code class="prettyprint">mysql&gt; create database php;
+</code></pre>
+<h2 id="@_u5220_u9664_u6570_u636E_u5E93"><a href="#@_u5220_u9664_u6570_u636E_u5E93" class="headerlink" title="@删除数据库"></a>@删除数据库</h2><pre><code class="prettyprint">mysql&gt; drop database php;
+</code></pre>
+<h2 id="@_u91CD_u547D_u540D_u6570_u636E_u5E93"><a href="#@_u91CD_u547D_u540D_u6570_u636E_u5E93" class="headerlink" title="@重命名数据库"></a>@重命名数据库</h2><h2 id="@_u9009_u62E9_u6570_u636E_u5E93"><a href="#@_u9009_u62E9_u6570_u636E_u5E93" class="headerlink" title="@选择数据库"></a>@选择数据库</h2><pre><code class="prettyprint">mysql&gt; use php;
+</code></pre>
+<h2 id="@_u5907_u4EFD_u6570_u636E_u5E93"><a href="#@_u5907_u4EFD_u6570_u636E_u5E93" class="headerlink" title="@备份数据库"></a>@备份数据库</h2><p>注(mysqldump的路径)：/opt/mysql/bin/mysqldump</p>
+<pre><code class="prettyprint">mysqldump DBname &gt; backupDBname.sql
+</code></pre>
+<h2 id="@_u5BFC_u51FA_u7ED3_u6784_u4E0D_u5BFC_u51FA_u6570_u636E"><a href="#@_u5BFC_u51FA_u7ED3_u6784_u4E0D_u5BFC_u51FA_u6570_u636E" class="headerlink" title="@导出结构不导出数据"></a>@导出结构不导出数据</h2><pre><code class="prettyprint">mysqldump -d 数据库名 -uroot -p &gt; xxx.sql
+</code></pre>
+<h2 id="@_u5BFC_u51FA_u6570_u636E_u4E0D_u5BFC_u51FA_u7ED3_u6784"><a href="#@_u5BFC_u51FA_u6570_u636E_u4E0D_u5BFC_u51FA_u7ED3_u6784" class="headerlink" title="@导出数据不导出结构"></a>@导出数据不导出结构</h2><pre><code class="prettyprint">mysqldump -t 数据库名 -uroot -p &gt; xxx.sql
+</code></pre>
+<h2 id="@_u5BFC_u51FA_u6570_u636E_u548C_u8868_u7ED3_u6784"><a href="#@_u5BFC_u51FA_u6570_u636E_u548C_u8868_u7ED3_u6784" class="headerlink" title="@导出数据和表结构"></a>@导出数据和表结构</h2><pre><code class="prettyprint">mysqldump 数据库名 -uroot -p &gt; xxx.sql
+</code></pre>
+<h2 id="@_u5BFC_u51FA_u7279_u5B9A_u8868_u7684_u7ED3_u6784"><a href="#@_u5BFC_u51FA_u7279_u5B9A_u8868_u7684_u7ED3_u6784" class="headerlink" title="@导出特定表的结构"></a>@导出特定表的结构</h2><pre><code class="prettyprint">mysqldump -uroot -p -B 数据库名 --table 表名 &gt; xxx.sql
+</code></pre>
+<h2 id="u5BFC_u51FA_u6574_u4E2A_u6570_u636E_u5E93_u7ED3_u6784_u548C_u6570_u636E"><a href="#u5BFC_u51FA_u6574_u4E2A_u6570_u636E_u5E93_u7ED3_u6784_u548C_u6570_u636E" class="headerlink" title="导出整个数据库结构和数据"></a>导出整个数据库结构和数据</h2><pre><code class="prettyprint">mysqldump -h localhost -uroot -p123456 database &gt; dump.sql
+</code></pre>
+<h2 id="u5BFC_u51FA_u5355_u4E2A_u6570_u636E_u8868_u7ED3_u6784_u548C_u6570_u636E"><a href="#u5BFC_u51FA_u5355_u4E2A_u6570_u636E_u8868_u7ED3_u6784_u548C_u6570_u636E" class="headerlink" title="导出单个数据表结构和数据"></a>导出单个数据表结构和数据</h2><pre><code class="prettyprint">mysqldump -h localhost -uroot -p123456  database table &gt; dump.sql
+</code></pre>
+<h2 id="u5BFC_u51FA_u6574_u4E2A_u6570_u636E_u5E93_u7ED3_u6784_uFF08_u4E0D_u5305_u542B_u6570_u636E_uFF09"><a href="#u5BFC_u51FA_u6574_u4E2A_u6570_u636E_u5E93_u7ED3_u6784_uFF08_u4E0D_u5305_u542B_u6570_u636E_uFF09" class="headerlink" title="导出整个数据库结构（不包含数据）"></a>导出整个数据库结构（不包含数据）</h2><pre><code class="prettyprint">mysqldump -h localhost -uroot -p123456  -d database &gt; dump.sql
+</code></pre>
+<h2 id="u5BFC_u51FA_u5355_u4E2A_u6570_u636E_u8868_u7ED3_u6784_uFF08_u4E0D_u5305_u542B_u6570_u636E_uFF09"><a href="#u5BFC_u51FA_u5355_u4E2A_u6570_u636E_u8868_u7ED3_u6784_uFF08_u4E0D_u5305_u542B_u6570_u636E_uFF09" class="headerlink" title="导出单个数据表结构（不包含数据）"></a>导出单个数据表结构（不包含数据）</h2><pre><code class="prettyprint">mysqldump -h localhost -uroot -p123456  -d database table &gt; dump.sql
+</code></pre>
+<h2 id="@_u5BFC_u5165_u6570_u636E_u5E93"><a href="#@_u5BFC_u5165_u6570_u636E_u5E93" class="headerlink" title="@导入数据库"></a>@导入数据库</h2><pre><code class="prettyprint">mysql&gt;use 目标数据库名
+mysql&gt;source 导入的文件名
+或者：
+/opt/mysq/bin/mysql DBname &lt; fileName.sql
+</code></pre>
+<p>注：导出的数据库文件在shell当前路径下(pwd)</p>
+<h2 id="@_u4FEE_u6539_u6570_u636E_u5E93_u5BC6_u7801"><a href="#@_u4FEE_u6539_u6570_u636E_u5E93_u5BC6_u7801" class="headerlink" title="@修改数据库密码"></a>@修改数据库密码</h2><pre><code class="prettyprint">mysql&gt;use mysql
+mysql&gt;UPDATE user SET password=PASSWORD(&quot;new password&quot;) WHERE user=&#39;name&#39;;
+mysql&gt; FLUSH PRIVILEGES;
+</code></pre>
+<h2 id="@_u65B0_u5EFA_u8868"><a href="#@_u65B0_u5EFA_u8868" class="headerlink" title="@新建表"></a>@新建表</h2><pre><code class="prettyprint">mysql&gt; create table users (id int(6),name VARCHAR(20));
+</code></pre>
+<h2 id="@_u65B0_u5EFA_u7D22_u5F15"><a href="#@_u65B0_u5EFA_u7D22_u5F15" class="headerlink" title="@新建索引"></a>@新建索引</h2><pre><code class="prettyprint">mysql&gt; create index users_name on users (name);
+</code></pre>
+<h2 id="@_u5217_u51FA_u6240_u6709_u7684_u8868"><a href="#@_u5217_u51FA_u6240_u6709_u7684_u8868" class="headerlink" title="@列出所有的表"></a>@列出所有的表</h2><pre><code class="prettyprint">mysql&gt; show tables;
++---------------+
+| Tables_in_php |
++---------------+
+| user          |
++---------------+
+</code></pre>
+<p>@修改auto_increment</p>
+<pre><code class="prettyprint">mysql&gt; alter table users AUTO_INCREMENT=2;
++---------------+
+| Tables_in_php |
++---------------+
+| user          |
++---------------+
+</code></pre>
+<h2 id="@_u683C_u5F0F_u5316Unix_u65F6_u95F4_u6233"><a href="#@_u683C_u5F0F_u5316Unix_u65F6_u95F4_u6233" class="headerlink" title="@格式化Unix时间戳"></a>@格式化Unix时间戳</h2><pre><code class="prettyprint">mysql&gt; select sid,ip,FROM_UNIXTIME(create_time,&#39;%Y-%m-%d %H:%i:%s&#39;) from yy_getcode_session;
+</code></pre>
+<h2 id="@_u63CF_u8FF0_u8868_u7ED3_u6784"><a href="#@_u63CF_u8FF0_u8868_u7ED3_u6784" class="headerlink" title="@描述表结构"></a>@描述表结构</h2><pre><code class="prettyprint">mysql&gt; describe user;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(6)      | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| age   | int(6)      | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+mysql&gt; show create table user;
++-------+-----------------------------------------------
+| Table | Create Table
++-------+-----------------------------------------------
+| user  | CREATE TABLE `user` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `age` int(3) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `age_name` (`age`,`name`),
+  KEY `user_name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 |
++-------+-----------------------------------------------
+</code></pre>
+<h2 id="@_u4FEE_u6539_u8868_u7684_u5B57_u7B26_u7F16_u7801"><a href="#@_u4FEE_u6539_u8868_u7684_u5B57_u7B26_u7F16_u7801" class="headerlink" title="@修改表的字符编码"></a>@修改表的字符编码</h2><pre><code class="prettyprint">mysql&gt; alter table user default character set=gbk;
+mysql&gt; alter table user default character set=utf8;
+</code></pre>
+<h2 id="@_u4FEE_u6539_u5B57_u6BB5_u7684_u5148_u540E_u987A_u5E8F"><a href="#@_u4FEE_u6539_u5B57_u6BB5_u7684_u5148_u540E_u987A_u5E8F" class="headerlink" title="@修改字段的先后顺序"></a>@修改字段的先后顺序</h2><pre><code class="prettyprint">mysql&gt; alter table user change name name varchar(20) after age;
+mysql&gt; describe user;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(4)      | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(20) | YES  | UNI | NULL    |                |
+| age   | int(3)      | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql&gt; alter table user change name name varchar(20) after age;
+Query OK, 1 row affected (0.13 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql&gt; describe user;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(4)      | NO   | PRI | NULL    | auto_increment |
+| age   | int(3)      | YES  |     | NULL    |                |
+| name  | varchar(20) | YES  | UNI | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+</code></pre>
+<h2 id="@_u91CD_u547D_u540D_u8868"><a href="#@_u91CD_u547D_u540D_u8868" class="headerlink" title="@重命名表"></a>@重命名表</h2><pre><code class="prettyprint">mysql&gt; alter table users rename to user;
+</code></pre>
+<h2 id="@_u5220_u9664_u8868"><a href="#@_u5220_u9664_u8868" class="headerlink" title="@删除表"></a>@删除表</h2><pre><code class="prettyprint">mysql&gt; drop table user;
+</code></pre>
+<h2 id="@_u6DFB_u52A0_u5217"><a href="#@_u6DFB_u52A0_u5217" class="headerlink" title="@添加列"></a>@添加列</h2><pre><code class="prettyprint">mysql&gt; alter table user add age int(6);
+</code></pre>
+<h2 id="@_u6DFB_u52A0_u7EC4_u5408_u552F_u4E00_u952E"><a href="#@_u6DFB_u52A0_u7EC4_u5408_u552F_u4E00_u952E" class="headerlink" title="@添加组合唯一键"></a>@添加组合唯一键</h2><pre><code class="prettyprint">mysql&gt; show create table user;
++-------+----------------------------------------------------------
+| Table | Create Table
++-------+----------------------------------------------------------
+| user  | CREATE TABLE `user` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `age` int(3) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 |
++-------+----------------------------------------------------------
+1 row in set (0.00 sec)
+
+mysql&gt; alter table user add unique key `age_name` (`age`,`name`);
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql&gt; show create table user;
++-------+----------------------------------------------------------
+| Table | Create Table
++-------+----------------------------------------------------------
+| user  | CREATE TABLE `user` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `age` int(3) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `age_name` (`age`,`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 |
++-------+----------------------------------------------------------
+1 row in set (0.00 sec)
+</code></pre>
+<h2 id="@_u5220_u9664_u552F_u4E00_u952E"><a href="#@_u5220_u9664_u552F_u4E00_u952E" class="headerlink" title="@删除唯一键"></a>@删除唯一键</h2><pre><code class="prettyprint">mysql&gt; alter table user drop index name;
+</code></pre>
+<h2 id="@_u5220_u9664_u5217"><a href="#@_u5220_u9664_u5217" class="headerlink" title="@删除列"></a>@删除列</h2><pre><code class="prettyprint">mysql&gt; alter table user drop column age;
+</code></pre>
+<h2 id="@_u4FEE_u6539_u5217_u6570_u636E_u7C7B_u578B_u548C_u7F16_u7801"><a href="#@_u4FEE_u6539_u5217_u6570_u636E_u7C7B_u578B_u548C_u7F16_u7801" class="headerlink" title="@修改列数据类型和编码"></a>@修改列数据类型和编码</h2><pre><code class="prettyprint">mysql&gt; alter table user modify column name varchar(33) character set utf8;
+</code></pre>
+<h2 id="@_u5C06id_u5B57_u6BB5_u8BBE_u4E3A_u4E3B_u952E_u5E76_u81EA_u589E"><a href="#@_u5C06id_u5B57_u6BB5_u8BBE_u4E3A_u4E3B_u952E_u5E76_u81EA_u589E" class="headerlink" title="@将id字段设为主键并自增"></a>@将id字段设为主键并自增</h2><pre><code class="prettyprint">mysql&gt; alter table user change id id int primary key auto_increment;
+</code></pre>
+<p>或者</p>
+<pre><code class="prettyprint">mysql&gt; alter table user modify column id int(4) primary key auto_increment;
+注:以上条sql语句的运行条件是id不是主键。
+</code></pre>
+<h2 id="@_u5220_u9664user_u8868_u7684_u4E3B_u952E_u5C5E_u6027"><a href="#@_u5220_u9664user_u8868_u7684_u4E3B_u952E_u5C5E_u6027" class="headerlink" title="@删除user表的主键属性"></a>@删除user表的主键属性</h2><pre><code class="prettyprint">mysql&gt; alter table user drop primary key,change id id int(5);
+</code></pre>
+<h2 id="@_u63D2_u5165_u6570_u636E"><a href="#@_u63D2_u5165_u6570_u636E" class="headerlink" title="@插入数据"></a>@插入数据</h2><pre><code class="prettyprint">mysql&gt; insert into user values(1,&#39;zhangheng&#39;);
+mysql&gt; insert into user values(2,&#39;zhangzhang&#39;),(3,&#39;hengzhang&#39;),(4,&#39;hengheng&#39;);
+</code></pre>
+<h2 id="@_u6E05_u7A7A_u6570_u636E_u8868"><a href="#@_u6E05_u7A7A_u6570_u636E_u8868" class="headerlink" title="@清空数据表"></a>@清空数据表</h2><pre><code class="prettyprint">delete from tablename
+truncate table tablename
+</code></pre>
+<h2 id="@_u66F4_u65B0_u6570_u636E_u8868"><a href="#@_u66F4_u65B0_u6570_u636E_u8868" class="headerlink" title="@更新数据表"></a>@更新数据表</h2><pre><code class="prettyprint">mysql&gt; update user set name=&#39;kisscss&#39; where id=1;
+</code></pre>
+<h2 id="@_u7ED9_u8FDC_u7A0B_u8BBF_u95EE_u5BA2_u6237_u7AEF_u6743_u9650"><a href="#@_u7ED9_u8FDC_u7A0B_u8BBF_u95EE_u5BA2_u6237_u7AEF_u6743_u9650" class="headerlink" title="@给远程访问客户端权限"></a>@给远程访问客户端权限</h2><pre><code class="prettyprint">grant all on *.* to &#39;username&#39;@&#39;192.168.0.233&#39; identified by &#39;password&#39;
+grant all on *.* to duoli1003a@&#39;192.168.1.%&#39; identified by &#39;fqd^ui@24wx*&#39;
+</code></pre>
+<p>username:表示用户名.<br>192.168.0.233:远程ip地址<br>password:表示远程登陆密码.<br>然后在233那太电脑上就可以如下方式访问mysql:</p>
+<pre><code class="prettyprint">mysql -h 192.168.50.108 -u username -p
+</code></pre>
+<h2 id="@_u663E_u793A_u67D0_u4E2A_u6570_u636E_u5E93_u6240_u6709_u7684_u5B58_u50A8_u8FC7_u7A0B_u540D"><a href="#@_u663E_u793A_u67D0_u4E2A_u6570_u636E_u5E93_u6240_u6709_u7684_u5B58_u50A8_u8FC7_u7A0B_u540D" class="headerlink" title="@显示某个数据库所有的存储过程名"></a>@显示某个数据库所有的存储过程名</h2><pre><code class="prettyprint">show procedure status where db=&#39;dbname&#39;
+</code></pre>
+<h2 id="@_u663E_u793A_u5B58_u50A8_u8FC7_u7A0B_u5185_u5BB9"><a href="#@_u663E_u793A_u5B58_u50A8_u8FC7_u7A0B_u5185_u5BB9" class="headerlink" title="@显示存储过程内容"></a>@显示存储过程内容</h2><pre><code class="prettyprint">show create procedure proName
+</code></pre>
+<h2 id="@_u5728_u547D_u4EE4_u884C_u521B_u5EFA_u5B58_u50A8_u8FC7_u7A0B"><a href="#@_u5728_u547D_u4EE4_u884C_u521B_u5EFA_u5B58_u50A8_u8FC7_u7A0B" class="headerlink" title="@在命令行创建存储过程"></a>@在命令行创建存储过程</h2><p>注：在命令行一般遇到；就表示语句结束了，所以可以通过改变结束符（delimiter）来避免这个冲突<br>delimiter //<br>这样就改变了结束符号为//，可以做如下测试：</p>
+<pre><code class="prettyprint">mysql&gt; delimiter //
+mysql&gt; select * from user;
+    -&gt; //
++------+------------+
+| id   | name       |
++------+------------+
+|    1 | zhangheng  |
+|    2 | zhangzhang |
+|    3 | hengzhang  |
+|    4 | hengheng   |
++------+------------+
+</code></pre>
+<p>说明结束符已经替换成了//，如果想换回来，可以这样：<br>delimiter ;</p>
+<h2 id="@_u521B_u5EFA_u5B58_u50A8_u8FC7_u7A0B"><a href="#@_u521B_u5EFA_u5B58_u50A8_u8FC7_u7A0B" class="headerlink" title="@创建存储过程"></a>@创建存储过程</h2><pre><code class="prettyprint">mysql&gt; create procedure chaxun()
+    -&gt; begin
+    -&gt; select * from user;
+    -&gt; end;
+    -&gt; //
+</code></pre>
+<h2 id="@_u8C03_u7528_u5B58_u50A8_u8FC7_u7A0B"><a href="#@_u8C03_u7528_u5B58_u50A8_u8FC7_u7A0B" class="headerlink" title="@调用存储过程"></a>@调用存储过程</h2><pre><code class="prettyprint">mysql&gt; call chaxun();
++------+------------+
+| id   | name       |
++------+------------+
+|    1 | kisscss    |
+|    2 | zhangzhang |
+|    3 | hengzhang  |
+|    4 | hengheng   |
++------+------------+
+</code></pre>
+<h2 id="@_u5220_u9664_u5B58_u50A8_u8FC7_u7A0B"><a href="#@_u5220_u9664_u5B58_u50A8_u8FC7_u7A0B" class="headerlink" title="@删除存储过程"></a>@删除存储过程</h2><pre><code class="prettyprint">mysql&gt; drop procedure pr_empty;
+</code></pre>
+<h2 id="@_u663E_u793A_u5F53_u524D_u767B_u5F55_u7684mysql_u7528_u6237_uFF1A"><a href="#@_u663E_u793A_u5F53_u524D_u767B_u5F55_u7684mysql_u7528_u6237_uFF1A" class="headerlink" title="@显示当前登录的mysql用户："></a>@显示当前登录的mysql用户：</h2><pre><code class="prettyprint">select current_user()
++----------------+
+| current_user() |
++----------------+
+| root@localhost |
++----------------+
+</code></pre>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="@_u5217_u51FA_u6240_u6709_u7684_u6570_u636E_u5E93"><a href="#@_u5217_u51FA_u6240_u6709_u7684_u6570_u636E_u5E93" class="headerlink" t]]>
+    </summary>
+    
+      <category term="Mysql" scheme="http://zobor.me/tags/Mysql/"/>
+    
+      <category term="数据库" scheme="http://zobor.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[web设备UA统计]]></title>
     <link href="http://zobor.me/2014/12/14/web%E8%AE%BE%E5%A4%87UA%E7%BB%9F%E8%AE%A1/"/>
     <id>http://zobor.me/2014/12/14/web设备UA统计/</id>
@@ -1677,8 +2183,8 @@ class Handlers {
     <link href="http://zobor.me/2014/09/03/%E6%9D%80%E6%8E%89%E6%8C%87%E5%AE%9A%E7%AB%AF%E5%8F%A3%E7%9A%84node%E8%BF%9B%E7%A8%8B/"/>
     <id>http://zobor.me/2014/09/03/杀掉指定端口的node进程/</id>
     <published>2014-09-03T09:40:33.000Z</published>
-    <updated>2016-04-17T04:39:21.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="http://imglf0.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1NFlhSUM4YmxSQitFUzJuTEJxb0lyN05WcngyR0NyZkd3PT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"></p>
+    <updated>2016-04-18T09:17:14.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="https://nodeblog.files.wordpress.com/2011/07/grid.png" alt=""></p>
 <p>通常有多个node进程运行时，需要停掉其中一个，这段代码应该可以帮助你。</p>
 <pre><code class="shell">#!/bin/bash
 if [[ $1 = &quot;&quot; ]];then
@@ -1695,14 +2201,52 @@ fi
 </code></pre>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><img src="http://imglf0.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1NFlhSUM4YmxSQitFUzJuTEJxb0lyN05WcngyR0NyZkd3PT0.png?imageView&amp;t]]>
+    <![CDATA[<p><img src="https://nodeblog.files.wordpress.com/2011/07/grid.png" alt=""></p>
+<p>通常有多个node进程运行时，需要停掉其中一个，这段代码应该可以帮助你。</p>
+<pre><code class]]>
     </summary>
     
-      <category term="nodejs" scheme="http://zobor.me/tags/nodejs/"/>
+      <category term="Node.js" scheme="http://zobor.me/tags/Node-js/"/>
     
       <category term="shell" scheme="http://zobor.me/tags/shell/"/>
     
       <category term="前端开发" scheme="http://zobor.me/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Google搜索秘籍]]></title>
+    <link href="http://zobor.me/2014/03/11/Google%E6%90%9C%E7%B4%A2%E7%A7%98%E7%B1%8D/"/>
+    <id>http://zobor.me/2014/03/11/Google搜索秘籍/</id>
+    <published>2014-03-11T11:23:44.000Z</published>
+    <updated>2016-04-18T09:15:07.000Z</updated>
+    <content type="html"><![CDATA[<pre><code class="prettyprint">// add host
+127.0.0.1 baidu.com
+</code></pre>
+<h2 id="u9AD8_u7EA7_u641C_u7D22"><a href="#u9AD8_u7EA7_u641C_u7D22" class="headerlink" title="高级搜索"></a>高级搜索</h2><ul>
+<li>site 表示搜索结果局限于某个具体网站或者网站频道，如163.com，或者是某个域名，如com.cn、com等等。</li>
+<li>link 语法返回所有链接到某个URL地址的网页</li>
+<li>inurl 语法返回的网页链接中包含第一个关键字，后面的关键字则出现在链接中或者网页文档中。</li>
+<li>allinurl 语法返回的网页的链接中包含所有查询关键字。这个查询的对象只集中于网页的链接字符串。</li>
+<li>allintitle和intitle 的用法类似于上面的allinurl和inurl，只是后者对URL进行查询，而前者对网页的标题栏进行查询。</li>
+<li>related related用来搜索结构内容方面相似的网页</li>
+<li>cache 用来搜索GOOGLE服务器上某页面的缓存</li>
+<li>info 用来显示与某链接相关的一系列搜索，提供cache、link、related和完全包含该链接的网页的功能</li>
+</ul>
+<h2 id="u4EE5_u4E0B_u662F_u5B9E_u4F8B"><a href="#u4EE5_u4E0B_u662F_u5B9E_u4F8B" class="headerlink" title="以下是实例"></a>以下是实例</h2><h3 id="1-_u6570_u503C_u8303_u56F4_uFF1A"><a href="#1-_u6570_u503C_u8303_u56F4_uFF1A" class="headerlink" title="1.数值范围："></a>1.数值范围：</h3><p>例如：在豆瓣上查找读过1000本书以上的人<br>1000.. 本读过 inurl:people  site:douban.com<br>1000.. 人评价 inurl:subject site:book.douban.com</p>
+<h3 id="2-_u6587_u4EF6_u67E5_u627E_uFF1A"><a href="#2-_u6587_u4EF6_u67E5_u627E_uFF1A" class="headerlink" title="2.文件查找："></a>2.文件查找：</h3><p>例如：查找网上facebook的jpg图片<br>facebook filetype:jpg<br>例如：查找关于javascript的PDF格式的电子书<br>intitle:javascript filetype:PDF<br>例如：在新浪爱问共享资料里面查找《精通javascript》的书籍<br>intitle:精通javascript site:sina.com.cn</p>
+<h3 id="3-_u53CD_u5411_u94FE_u63A5_u67E5_u8BE2"><a href="#3-_u53CD_u5411_u94FE_u63A5_u67E5_u8BE2" class="headerlink" title="3.反向链接查询"></a>3.反向链接查询</h3><p>搜索所有含指向华军软件园bbs.hgdonline.net链接的网页。<br>link:bbs.hgdonline.net</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<pre><code class="prettyprint">// add host
+127.0.0.1 baidu.com
+</code></pre>
+<h2 id="u9AD8_u7EA7_u641C_u7D22"><a href="#u9AD8_u7EA7_u641C_u7]]>
+    </summary>
+    
+      <category term="Google" scheme="http://zobor.me/tags/Google/"/>
+    
+      <category term="电脑科学技术" scheme="http://zobor.me/categories/%E7%94%B5%E8%84%91%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   

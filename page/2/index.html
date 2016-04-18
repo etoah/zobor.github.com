@@ -54,9 +54,9 @@ ga('send', 'pageview');
       <a href="/" id="logo"><span class="site-title">Zobor</span></a>
       <nav id="main-nav">
         
-          <a class="main-nav-link" href="/categories/">Categories</a>
-        
           <a class="main-nav-link" href="/archives/">Archives</a>
+        
+          <a class="main-nav-link" href="/categories/">Categories</a>
         
           <a class="main-nav-link" href="/tags/">Tags</a>
         
@@ -81,9 +81,9 @@ ga('send', 'pageview');
     <table class="menu outer">
       <tr>
       
-        <td><a class="main-nav-link" href="/categories/">Categories</a></td>
-      
         <td><a class="main-nav-link" href="/archives/">Archives</a></td>
+      
+        <td><a class="main-nav-link" href="/categories/">Categories</a></td>
       
         <td><a class="main-nav-link" href="/tags/">Tags</a></td>
       
@@ -116,11 +116,11 @@ ga('send', 'pageview');
     
     <div class="article-info profile-block">
       <div class="article-info-block">
-        11
+        15
         <span>posts</span>
       </div>
       <div class="article-info-block">
-        17
+        21
         <span>tags</span>
       </div>
     </div>
@@ -154,6 +154,1326 @@ ga('send', 'pageview');
 </aside>
       
       <section id="main">
+      <article id="post-常用的mysql语句-入门" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/18/常用的mysql语句-入门/">常用的mysql语句--入门</a>
+    </h1>
+  
+
+        
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+    <time datetime="2015-04-18T09:19:33.000Z" itemprop="datePublished">2015-04-18</time>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
+  </div>
+
+          
+
+          
+        </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <h2 id="@_u5217_u51FA_u6240_u6709_u7684_u6570_u636E_u5E93"><a href="#@_u5217_u51FA_u6240_u6709_u7684_u6570_u636E_u5E93" class="headerlink" title="@列出所有的数据库"></a>@列出所有的数据库</h2><pre><code class="prettyprint">mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| java               |
+| kisscss_wp         |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+</code></pre>
+<h2 id="@_u521B_u5EFA_u6570_u636E_u5E93"><a href="#@_u521B_u5EFA_u6570_u636E_u5E93" class="headerlink" title="@创建数据库"></a>@创建数据库</h2><pre><code class="prettyprint">mysql&gt; create database php;
+</code></pre>
+<h2 id="@_u5220_u9664_u6570_u636E_u5E93"><a href="#@_u5220_u9664_u6570_u636E_u5E93" class="headerlink" title="@删除数据库"></a>@删除数据库</h2><pre><code class="prettyprint">mysql&gt; drop database php;
+</code></pre>
+<h2 id="@_u91CD_u547D_u540D_u6570_u636E_u5E93"><a href="#@_u91CD_u547D_u540D_u6570_u636E_u5E93" class="headerlink" title="@重命名数据库"></a>@重命名数据库</h2><h2 id="@_u9009_u62E9_u6570_u636E_u5E93"><a href="#@_u9009_u62E9_u6570_u636E_u5E93" class="headerlink" title="@选择数据库"></a>@选择数据库</h2><pre><code class="prettyprint">mysql&gt; use php;
+</code></pre>
+<h2 id="@_u5907_u4EFD_u6570_u636E_u5E93"><a href="#@_u5907_u4EFD_u6570_u636E_u5E93" class="headerlink" title="@备份数据库"></a>@备份数据库</h2><p>注(mysqldump的路径)：/opt/mysql/bin/mysqldump</p>
+<pre><code class="prettyprint">mysqldump DBname &gt; backupDBname.sql
+</code></pre>
+<h2 id="@_u5BFC_u51FA_u7ED3_u6784_u4E0D_u5BFC_u51FA_u6570_u636E"><a href="#@_u5BFC_u51FA_u7ED3_u6784_u4E0D_u5BFC_u51FA_u6570_u636E" class="headerlink" title="@导出结构不导出数据"></a>@导出结构不导出数据</h2><pre><code class="prettyprint">mysqldump -d 数据库名 -uroot -p &gt; xxx.sql
+</code></pre>
+<h2 id="@_u5BFC_u51FA_u6570_u636E_u4E0D_u5BFC_u51FA_u7ED3_u6784"><a href="#@_u5BFC_u51FA_u6570_u636E_u4E0D_u5BFC_u51FA_u7ED3_u6784" class="headerlink" title="@导出数据不导出结构"></a>@导出数据不导出结构</h2><pre><code class="prettyprint">mysqldump -t 数据库名 -uroot -p &gt; xxx.sql
+</code></pre>
+<h2 id="@_u5BFC_u51FA_u6570_u636E_u548C_u8868_u7ED3_u6784"><a href="#@_u5BFC_u51FA_u6570_u636E_u548C_u8868_u7ED3_u6784" class="headerlink" title="@导出数据和表结构"></a>@导出数据和表结构</h2><pre><code class="prettyprint">mysqldump 数据库名 -uroot -p &gt; xxx.sql
+</code></pre>
+<h2 id="@_u5BFC_u51FA_u7279_u5B9A_u8868_u7684_u7ED3_u6784"><a href="#@_u5BFC_u51FA_u7279_u5B9A_u8868_u7684_u7ED3_u6784" class="headerlink" title="@导出特定表的结构"></a>@导出特定表的结构</h2><pre><code class="prettyprint">mysqldump -uroot -p -B 数据库名 --table 表名 &gt; xxx.sql
+</code></pre>
+<h2 id="u5BFC_u51FA_u6574_u4E2A_u6570_u636E_u5E93_u7ED3_u6784_u548C_u6570_u636E"><a href="#u5BFC_u51FA_u6574_u4E2A_u6570_u636E_u5E93_u7ED3_u6784_u548C_u6570_u636E" class="headerlink" title="导出整个数据库结构和数据"></a>导出整个数据库结构和数据</h2><pre><code class="prettyprint">mysqldump -h localhost -uroot -p123456 database &gt; dump.sql
+</code></pre>
+<h2 id="u5BFC_u51FA_u5355_u4E2A_u6570_u636E_u8868_u7ED3_u6784_u548C_u6570_u636E"><a href="#u5BFC_u51FA_u5355_u4E2A_u6570_u636E_u8868_u7ED3_u6784_u548C_u6570_u636E" class="headerlink" title="导出单个数据表结构和数据"></a>导出单个数据表结构和数据</h2><pre><code class="prettyprint">mysqldump -h localhost -uroot -p123456  database table &gt; dump.sql
+</code></pre>
+<h2 id="u5BFC_u51FA_u6574_u4E2A_u6570_u636E_u5E93_u7ED3_u6784_uFF08_u4E0D_u5305_u542B_u6570_u636E_uFF09"><a href="#u5BFC_u51FA_u6574_u4E2A_u6570_u636E_u5E93_u7ED3_u6784_uFF08_u4E0D_u5305_u542B_u6570_u636E_uFF09" class="headerlink" title="导出整个数据库结构（不包含数据）"></a>导出整个数据库结构（不包含数据）</h2><pre><code class="prettyprint">mysqldump -h localhost -uroot -p123456  -d database &gt; dump.sql
+</code></pre>
+<h2 id="u5BFC_u51FA_u5355_u4E2A_u6570_u636E_u8868_u7ED3_u6784_uFF08_u4E0D_u5305_u542B_u6570_u636E_uFF09"><a href="#u5BFC_u51FA_u5355_u4E2A_u6570_u636E_u8868_u7ED3_u6784_uFF08_u4E0D_u5305_u542B_u6570_u636E_uFF09" class="headerlink" title="导出单个数据表结构（不包含数据）"></a>导出单个数据表结构（不包含数据）</h2><pre><code class="prettyprint">mysqldump -h localhost -uroot -p123456  -d database table &gt; dump.sql
+</code></pre>
+<h2 id="@_u5BFC_u5165_u6570_u636E_u5E93"><a href="#@_u5BFC_u5165_u6570_u636E_u5E93" class="headerlink" title="@导入数据库"></a>@导入数据库</h2><pre><code class="prettyprint">mysql&gt;use 目标数据库名
+mysql&gt;source 导入的文件名
+或者：
+/opt/mysq/bin/mysql DBname &lt; fileName.sql
+</code></pre>
+<p>注：导出的数据库文件在shell当前路径下(pwd)</p>
+<h2 id="@_u4FEE_u6539_u6570_u636E_u5E93_u5BC6_u7801"><a href="#@_u4FEE_u6539_u6570_u636E_u5E93_u5BC6_u7801" class="headerlink" title="@修改数据库密码"></a>@修改数据库密码</h2><pre><code class="prettyprint">mysql&gt;use mysql
+mysql&gt;UPDATE user SET password=PASSWORD(&quot;new password&quot;) WHERE user=&#39;name&#39;;
+mysql&gt; FLUSH PRIVILEGES;
+</code></pre>
+<h2 id="@_u65B0_u5EFA_u8868"><a href="#@_u65B0_u5EFA_u8868" class="headerlink" title="@新建表"></a>@新建表</h2><pre><code class="prettyprint">mysql&gt; create table users (id int(6),name VARCHAR(20));
+</code></pre>
+<h2 id="@_u65B0_u5EFA_u7D22_u5F15"><a href="#@_u65B0_u5EFA_u7D22_u5F15" class="headerlink" title="@新建索引"></a>@新建索引</h2><pre><code class="prettyprint">mysql&gt; create index users_name on users (name);
+</code></pre>
+<h2 id="@_u5217_u51FA_u6240_u6709_u7684_u8868"><a href="#@_u5217_u51FA_u6240_u6709_u7684_u8868" class="headerlink" title="@列出所有的表"></a>@列出所有的表</h2><pre><code class="prettyprint">mysql&gt; show tables;
++---------------+
+| Tables_in_php |
++---------------+
+| user          |
++---------------+
+</code></pre>
+<p>@修改auto_increment</p>
+<pre><code class="prettyprint">mysql&gt; alter table users AUTO_INCREMENT=2;
++---------------+
+| Tables_in_php |
++---------------+
+| user          |
++---------------+
+</code></pre>
+<h2 id="@_u683C_u5F0F_u5316Unix_u65F6_u95F4_u6233"><a href="#@_u683C_u5F0F_u5316Unix_u65F6_u95F4_u6233" class="headerlink" title="@格式化Unix时间戳"></a>@格式化Unix时间戳</h2><pre><code class="prettyprint">mysql&gt; select sid,ip,FROM_UNIXTIME(create_time,&#39;%Y-%m-%d %H:%i:%s&#39;) from yy_getcode_session;
+</code></pre>
+<h2 id="@_u63CF_u8FF0_u8868_u7ED3_u6784"><a href="#@_u63CF_u8FF0_u8868_u7ED3_u6784" class="headerlink" title="@描述表结构"></a>@描述表结构</h2><pre><code class="prettyprint">mysql&gt; describe user;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int(6)      | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| age   | int(6)      | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+mysql&gt; show create table user;
++-------+-----------------------------------------------
+| Table | Create Table
++-------+-----------------------------------------------
+| user  | CREATE TABLE `user` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `age` int(3) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `age_name` (`age`,`name`),
+  KEY `user_name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 |
++-------+-----------------------------------------------
+</code></pre>
+<h2 id="@_u4FEE_u6539_u8868_u7684_u5B57_u7B26_u7F16_u7801"><a href="#@_u4FEE_u6539_u8868_u7684_u5B57_u7B26_u7F16_u7801" class="headerlink" title="@修改表的字符编码"></a>@修改表的字符编码</h2><pre><code class="prettyprint">mysql&gt; alter table user default character set=gbk;
+mysql&gt; alter table user default character set=utf8;
+</code></pre>
+<h2 id="@_u4FEE_u6539_u5B57_u6BB5_u7684_u5148_u540E_u987A_u5E8F"><a href="#@_u4FEE_u6539_u5B57_u6BB5_u7684_u5148_u540E_u987A_u5E8F" class="headerlink" title="@修改字段的先后顺序"></a>@修改字段的先后顺序</h2><pre><code class="prettyprint">mysql&gt; alter table user change name name varchar(20) after age;
+mysql&gt; describe user;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(4)      | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(20) | YES  | UNI | NULL    |                |
+| age   | int(3)      | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql&gt; alter table user change name name varchar(20) after age;
+Query OK, 1 row affected (0.13 sec)
+Records: 1  Duplicates: 0  Warnings: 0
+
+mysql&gt; describe user;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(4)      | NO   | PRI | NULL    | auto_increment |
+| age   | int(3)      | YES  |     | NULL    |                |
+| name  | varchar(20) | YES  | UNI | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+</code></pre>
+<h2 id="@_u91CD_u547D_u540D_u8868"><a href="#@_u91CD_u547D_u540D_u8868" class="headerlink" title="@重命名表"></a>@重命名表</h2><pre><code class="prettyprint">mysql&gt; alter table users rename to user;
+</code></pre>
+<h2 id="@_u5220_u9664_u8868"><a href="#@_u5220_u9664_u8868" class="headerlink" title="@删除表"></a>@删除表</h2><pre><code class="prettyprint">mysql&gt; drop table user;
+</code></pre>
+<h2 id="@_u6DFB_u52A0_u5217"><a href="#@_u6DFB_u52A0_u5217" class="headerlink" title="@添加列"></a>@添加列</h2><pre><code class="prettyprint">mysql&gt; alter table user add age int(6);
+</code></pre>
+<h2 id="@_u6DFB_u52A0_u7EC4_u5408_u552F_u4E00_u952E"><a href="#@_u6DFB_u52A0_u7EC4_u5408_u552F_u4E00_u952E" class="headerlink" title="@添加组合唯一键"></a>@添加组合唯一键</h2><pre><code class="prettyprint">mysql&gt; show create table user;
++-------+----------------------------------------------------------
+| Table | Create Table
++-------+----------------------------------------------------------
+| user  | CREATE TABLE `user` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `age` int(3) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 |
++-------+----------------------------------------------------------
+1 row in set (0.00 sec)
+
+mysql&gt; alter table user add unique key `age_name` (`age`,`name`);
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql&gt; show create table user;
++-------+----------------------------------------------------------
+| Table | Create Table
++-------+----------------------------------------------------------
+| user  | CREATE TABLE `user` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `age` int(3) DEFAULT NULL,
+  `name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `age_name` (`age`,`name`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 |
++-------+----------------------------------------------------------
+1 row in set (0.00 sec)
+</code></pre>
+<h2 id="@_u5220_u9664_u552F_u4E00_u952E"><a href="#@_u5220_u9664_u552F_u4E00_u952E" class="headerlink" title="@删除唯一键"></a>@删除唯一键</h2><pre><code class="prettyprint">mysql&gt; alter table user drop index name;
+</code></pre>
+<h2 id="@_u5220_u9664_u5217"><a href="#@_u5220_u9664_u5217" class="headerlink" title="@删除列"></a>@删除列</h2><pre><code class="prettyprint">mysql&gt; alter table user drop column age;
+</code></pre>
+<h2 id="@_u4FEE_u6539_u5217_u6570_u636E_u7C7B_u578B_u548C_u7F16_u7801"><a href="#@_u4FEE_u6539_u5217_u6570_u636E_u7C7B_u578B_u548C_u7F16_u7801" class="headerlink" title="@修改列数据类型和编码"></a>@修改列数据类型和编码</h2><pre><code class="prettyprint">mysql&gt; alter table user modify column name varchar(33) character set utf8;
+</code></pre>
+<h2 id="@_u5C06id_u5B57_u6BB5_u8BBE_u4E3A_u4E3B_u952E_u5E76_u81EA_u589E"><a href="#@_u5C06id_u5B57_u6BB5_u8BBE_u4E3A_u4E3B_u952E_u5E76_u81EA_u589E" class="headerlink" title="@将id字段设为主键并自增"></a>@将id字段设为主键并自增</h2><pre><code class="prettyprint">mysql&gt; alter table user change id id int primary key auto_increment;
+</code></pre>
+<p>或者</p>
+<pre><code class="prettyprint">mysql&gt; alter table user modify column id int(4) primary key auto_increment;
+注:以上条sql语句的运行条件是id不是主键。
+</code></pre>
+<h2 id="@_u5220_u9664user_u8868_u7684_u4E3B_u952E_u5C5E_u6027"><a href="#@_u5220_u9664user_u8868_u7684_u4E3B_u952E_u5C5E_u6027" class="headerlink" title="@删除user表的主键属性"></a>@删除user表的主键属性</h2><pre><code class="prettyprint">mysql&gt; alter table user drop primary key,change id id int(5);
+</code></pre>
+<h2 id="@_u63D2_u5165_u6570_u636E"><a href="#@_u63D2_u5165_u6570_u636E" class="headerlink" title="@插入数据"></a>@插入数据</h2><pre><code class="prettyprint">mysql&gt; insert into user values(1,&#39;zhangheng&#39;);
+mysql&gt; insert into user values(2,&#39;zhangzhang&#39;),(3,&#39;hengzhang&#39;),(4,&#39;hengheng&#39;);
+</code></pre>
+<h2 id="@_u6E05_u7A7A_u6570_u636E_u8868"><a href="#@_u6E05_u7A7A_u6570_u636E_u8868" class="headerlink" title="@清空数据表"></a>@清空数据表</h2><pre><code class="prettyprint">delete from tablename
+truncate table tablename
+</code></pre>
+<h2 id="@_u66F4_u65B0_u6570_u636E_u8868"><a href="#@_u66F4_u65B0_u6570_u636E_u8868" class="headerlink" title="@更新数据表"></a>@更新数据表</h2><pre><code class="prettyprint">mysql&gt; update user set name=&#39;kisscss&#39; where id=1;
+</code></pre>
+<h2 id="@_u7ED9_u8FDC_u7A0B_u8BBF_u95EE_u5BA2_u6237_u7AEF_u6743_u9650"><a href="#@_u7ED9_u8FDC_u7A0B_u8BBF_u95EE_u5BA2_u6237_u7AEF_u6743_u9650" class="headerlink" title="@给远程访问客户端权限"></a>@给远程访问客户端权限</h2><pre><code class="prettyprint">grant all on *.* to &#39;username&#39;@&#39;192.168.0.233&#39; identified by &#39;password&#39;
+grant all on *.* to duoli1003a@&#39;192.168.1.%&#39; identified by &#39;fqd^ui@24wx*&#39;
+</code></pre>
+<p>username:表示用户名.<br>192.168.0.233:远程ip地址<br>password:表示远程登陆密码.<br>然后在233那太电脑上就可以如下方式访问mysql:</p>
+<pre><code class="prettyprint">mysql -h 192.168.50.108 -u username -p
+</code></pre>
+<h2 id="@_u663E_u793A_u67D0_u4E2A_u6570_u636E_u5E93_u6240_u6709_u7684_u5B58_u50A8_u8FC7_u7A0B_u540D"><a href="#@_u663E_u793A_u67D0_u4E2A_u6570_u636E_u5E93_u6240_u6709_u7684_u5B58_u50A8_u8FC7_u7A0B_u540D" class="headerlink" title="@显示某个数据库所有的存储过程名"></a>@显示某个数据库所有的存储过程名</h2><pre><code class="prettyprint">show procedure status where db=&#39;dbname&#39;
+</code></pre>
+<h2 id="@_u663E_u793A_u5B58_u50A8_u8FC7_u7A0B_u5185_u5BB9"><a href="#@_u663E_u793A_u5B58_u50A8_u8FC7_u7A0B_u5185_u5BB9" class="headerlink" title="@显示存储过程内容"></a>@显示存储过程内容</h2><pre><code class="prettyprint">show create procedure proName
+</code></pre>
+<h2 id="@_u5728_u547D_u4EE4_u884C_u521B_u5EFA_u5B58_u50A8_u8FC7_u7A0B"><a href="#@_u5728_u547D_u4EE4_u884C_u521B_u5EFA_u5B58_u50A8_u8FC7_u7A0B" class="headerlink" title="@在命令行创建存储过程"></a>@在命令行创建存储过程</h2><p>注：在命令行一般遇到；就表示语句结束了，所以可以通过改变结束符（delimiter）来避免这个冲突<br>delimiter //<br>这样就改变了结束符号为//，可以做如下测试：</p>
+<pre><code class="prettyprint">mysql&gt; delimiter //
+mysql&gt; select * from user;
+    -&gt; //
++------+------------+
+| id   | name       |
++------+------------+
+|    1 | zhangheng  |
+|    2 | zhangzhang |
+|    3 | hengzhang  |
+|    4 | hengheng   |
++------+------------+
+</code></pre>
+<p>说明结束符已经替换成了//，如果想换回来，可以这样：<br>delimiter ;</p>
+<h2 id="@_u521B_u5EFA_u5B58_u50A8_u8FC7_u7A0B"><a href="#@_u521B_u5EFA_u5B58_u50A8_u8FC7_u7A0B" class="headerlink" title="@创建存储过程"></a>@创建存储过程</h2><pre><code class="prettyprint">mysql&gt; create procedure chaxun()
+    -&gt; begin
+    -&gt; select * from user;
+    -&gt; end;
+    -&gt; //
+</code></pre>
+<h2 id="@_u8C03_u7528_u5B58_u50A8_u8FC7_u7A0B"><a href="#@_u8C03_u7528_u5B58_u50A8_u8FC7_u7A0B" class="headerlink" title="@调用存储过程"></a>@调用存储过程</h2><pre><code class="prettyprint">mysql&gt; call chaxun();
++------+------------+
+| id   | name       |
++------+------------+
+|    1 | kisscss    |
+|    2 | zhangzhang |
+|    3 | hengzhang  |
+|    4 | hengheng   |
++------+------------+
+</code></pre>
+<h2 id="@_u5220_u9664_u5B58_u50A8_u8FC7_u7A0B"><a href="#@_u5220_u9664_u5B58_u50A8_u8FC7_u7A0B" class="headerlink" title="@删除存储过程"></a>@删除存储过程</h2><pre><code class="prettyprint">mysql&gt; drop procedure pr_empty;
+</code></pre>
+<h2 id="@_u663E_u793A_u5F53_u524D_u767B_u5F55_u7684mysql_u7528_u6237_uFF1A"><a href="#@_u663E_u793A_u5F53_u524D_u767B_u5F55_u7684mysql_u7528_u6237_uFF1A" class="headerlink" title="@显示当前登录的mysql用户："></a>@显示当前登录的mysql用户：</h2><pre><code class="prettyprint">select current_user()
++----------------+
+| current_user() |
++----------------+
+| root@localhost |
++----------------+
+</code></pre>
+
+        
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2015/04/18/常用的mysql语句-入门/">常用的mysql语句--入门</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2015/04/18/常用的mysql语句-入门/">http://zobor.me/2015/04/18/常用的mysql语句-入门/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
+
+        
+
+      
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
+    </div>
+    
+
+    
+
+    <footer class="article-footer print-invisible">
+      <a data-url="http://zobor.me/2015/04/18/常用的mysql语句-入门/" data-id="cin5t7pd3000zwtj1aud9vioz" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2015/04/18/常用的mysql语句-入门/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mysql/">Mysql</a></li></ul>
+
+    </footer>
+  </div>
+
+  
+</article>
+
+<div class="print-invisible">
+  
+
+</div>
+
+
+    
+      <article id="post-web设备UA统计" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/14/web设备UA统计/">web设备UA统计</a>
+    </h1>
+  
+
+        
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+    <time datetime="2014-12-14T11:20:51.000Z" itemprop="datePublished">2014-12-14</time>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/前端开发/">前端开发</a>
+  </div>
+
+          
+
+          
+        </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <p><img src="http://imglf.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1KzlBeFdZNk9UZm9YZjl1elJFTHdCMTdKVUxYeGc2M3BBPT0.jpg?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"></p>
+<h2 id="ipad"><a href="#ipad" class="headerlink" title="ipad"></a>ipad</h2><p><code>platform=iPad</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13A344 Safari/601.1.46 (000445)</li>
+<li>[safari] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13A344 Safari/601.1</li>
+<li>[wechat] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A344 MicroMessenger/6.2.2 NetType/WIFI Language/zh_CN</li>
+<li>[qq] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A344 IPadQQ/5.1.0.317 QQ/5.1.0.317</li>
+<li>[qzone] Mozilla/5.0 (iPad; CPU OS 9_0 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13A344</li>
+</ul>
+<h2 id="iphone_6"><a href="#iphone_6" class="headerlink" title="iphone 6"></a>iphone 6</h2><p><code>platform=iPhone</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1 (KHTML, like Gecko) CriOS/47.0.2526.70 Mobile/13B143 Safari/601.1.46 (000406)</li>
+<li>[safari] Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1</li>
+<li>[wechat] Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 MicroMessenger/6.3.8 NetType/WIFI Language/zh_CN</li>
+<li>[qq] Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 QQ/6.1.0.496 Pixel/750 NetType/WIFI Mem/70</li>
+<li>[qzone] QZONEJSSDK/5.8.1.1 QQJSSDK/1.2 Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13B143 Qzone/V1_IPH_QZ_5.8.1_1_APP_A NewVersion</li>
+</ul>
+<h2 id="u534E_u4E3AMate7_uFF08HUAWEI_MT7-TL00_uFF09"><a href="#u534E_u4E3AMate7_uFF08HUAWEI_MT7-TL00_uFF09" class="headerlink" title="华为Mate7（HUAWEI MT7-TL00）"></a>华为Mate7（HUAWEI MT7-TL00）</h2><p><code>platform=Linux armv7l</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.83 Mobile Safari/537.36</li>
+<li>[wechat] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 MicroMessenger/6.3.7.65_r060a025.660 NetType/WIFI Language/zh_CN</li>
+<li>[qq] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025477 Mobile Safari/533.1 V1_AND_SQ_6.0.1_302_YYB_D QQ/6.0.1.2610 NetType/WIFI WebP/0.3.0 Pixel/1080</li>
+<li>[qzone] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 QQJSSDK/1.3 Qzone/V1_AND_QZ_6.0.1_288_YYB_D QZONEJSSDK/6.0</li>
+<li>[mqqbrowser] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-cn; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/537.36 (KHTML, like Gecko)Version/4.0 Chrome/37.0.0.0 MQQBrowser/6.3 Mobile Safari/537.36</li>
+<li>[ucbrowser] Mozilla/5.0 (Linux; U; Android 4.4.2; zh-CN; HUAWEI MT7-TL00 Build/HuaweiMT7-TL00) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 UCBrowser/10.9.0.703 U3/0.8.0 Mobile Safari/534.30</li>
+<li>[Default] HUAWEI_MT7-TL00_TD/5.0 Android/4.4.2 (Linux; U; Android 4.4.2; zh-cn) Release/01.18.2014 Browser/WAP2.0 (AppleWebKit/537.36) Mobile Safari/537.36</li>
+</ul>
+<h2 id="iMac"><a href="#iMac" class="headerlink" title="iMac"></a>iMac</h2><p><code>platform=MacIntel</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36</li>
+<li>[safari] Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17</li>
+<li>[firefox] Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:42.0) Gecko/20100101 Firefox/42.0</li>
+<li>[qqbrowser] Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36 QQBrowser/3.9.3952.400</li>
+</ul>
+<h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><p><code>platform=Win32</code></p>
+<ul>
+<li>[chrome] Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36</li>
+<li>[firefox] Mozilla/5.0 (Windows NT 6.1; WOW64; rv:39.0) Gecko/20100101 Firefox/39.0</li>
+<li>[ie] Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E</li>
+</ul>
+<h2 id="huawei_p6"><a href="#huawei_p6" class="headerlink" title="huawei p6"></a>huawei p6</h2><ul>
+<li>[chrome] Mozilla/5.0 (Linux; Android 4.4.2; HUAWEI P6-C00 Build/HuaweiP6-C00) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.93 Mobile Safari/537.36</li>
+</ul>
+<h2 id="samsung_s3"><a href="#samsung_s3" class="headerlink" title="samsung s3"></a>samsung s3</h2><ul>
+<li>[mqq] Mozilla/5.0 (Linux; U; Android 4.1.2; zh-cn; GT-I9300 Build/JZO54K) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 V1_AND_SQ_6.0.1_302_YYB_D QQ/6.0.1.2610 NetType/WIFI WebP/0.3.0 Pixel/720</li>
+</ul>
+<h2 id="huawei_g750"><a href="#huawei_g750" class="headerlink" title="huawei g750"></a>huawei g750</h2><ul>
+<li>[mqq] Mozilla/5.0 (Linux; U; Android 4.2.2; zh-cn; HUAWEI G750-T00 Build/HuaweiG750-T00) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 MicroMessenger/6.3.7.65_r060a025.660 NetType/WIFI Language/zh_CN</li>
+</ul>
+<h2 id="ipod"><a href="#ipod" class="headerlink" title="ipod"></a>ipod</h2><ul>
+<li>[wechat] Mozilla/5.0 (iPod touch; CPU iPhone OS 7_1_1 like Mac OS X) AppleWebKit/537.51.2 (KHTML, like Gecko) Mobile/11D201 MicroMessenger/6.3.6 NetType/WIFI Language/zh_CN</li>
+</ul>
+<h2 id="u575A_u679C_u624B_u673A"><a href="#u575A_u679C_u624B_u673A" class="headerlink" title="坚果手机"></a>坚果手机</h2><ul>
+<li>[Default] Mozilla/5.0 (Linux; Android 4.4.4; YQ601 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/38.0.2125.102 Mobile Safari/537.36</li>
+<li>[wechat] Mozilla/5.0 (Linux; Android 4.4.4; YQ601 Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 MicroMessenger/6.1.0.57_r1048261.540 NetType/WIFI</li>
+</ul>
+<h2 id="google_Nexus_5"><a href="#google_Nexus_5" class="headerlink" title="google Nexus 5"></a>google Nexus 5</h2><ul>
+<li>[wechat] Mozilla/5.0 (Linux; U; Android 5.1.1; zh-cn; Nexus 5 Build/LMY48I) AppleWebKit/533.1 (KHTML, like Gecko)Version/4.0 MQQBrowser/5.4 TBS/025483 Mobile Safari/533.1 MicroMessenger/6.3.8.50_r251a77a.680 NetType/WIFI Language/zh_CN</li>
+</ul>
+
+        
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2014/12/14/web设备UA统计/">web设备UA统计</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2014/12/14/web设备UA统计/">http://zobor.me/2014/12/14/web设备UA统计/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
+
+        
+
+      
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
+    </div>
+    
+
+    
+
+    <footer class="article-footer print-invisible">
+      <a data-url="http://zobor.me/2014/12/14/web设备UA统计/" data-id="cin5t7pd9001bwtj13dicbqcj" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2014/12/14/web设备UA统计/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
+
+    </footer>
+  </div>
+
+  
+</article>
+
+<div class="print-invisible">
+  
+
+</div>
+
+
+    
+      <article id="post-web终端对html5-video的支持统计" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/03/web终端对html5-video的支持统计/">web终端对html5 video的支持统计</a>
+    </h1>
+  
+
+        
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+    <time datetime="2014-10-03T15:29:33.000Z" itemprop="datePublished">2014-10-03</time>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/前端开发/">前端开发</a>
+  </div>
+
+          
+
+          
+        </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <p><img src="http://imglf2.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1NVVGeU1OMVl0QlFuVUpFNmxyK0Rld1Btd3daYXh5NDNBPT0.jpg?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"></p>
+<h2 id="u652F_u6301autoplay"><a href="#u652F_u6301autoplay" class="headerlink" title="支持autoplay"></a>支持autoplay</h2><table>
+<thead>
+<tr>
+<th>设备</th>
+<th>微信</th>
+<th>手Q</th>
+<th>Mobile Chrome</th>
+<th>Mobile Safari</th>
+<th>自带浏览器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iphone4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone5s</td>
+<td>true</td>
+<td>true</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone6</td>
+<td>true</td>
+<td>true</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ipad</td>
+<td>true</td>
+<td>－</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>华为Mate7</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>华为P6</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="u652F_u6301preload"><a href="#u652F_u6301preload" class="headerlink" title="支持preload"></a>支持preload</h2><table>
+<thead>
+<tr>
+<th>设备</th>
+<th>微信</th>
+<th>手Q</th>
+<th>Mobile Chrome</th>
+<th>Mobile Safari</th>
+<th>自带浏览器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iphone4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone5s</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone6</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ipad</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>华为Mate7</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>华为P6</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>总结：手机设备都不支持preload</p>
+<h2 id="u652F_u6301mute"><a href="#u652F_u6301mute" class="headerlink" title="支持mute"></a>支持mute</h2><table>
+<thead>
+<tr>
+<th>设备</th>
+<th>微信</th>
+<th>手Q</th>
+<th>Mobile Chrome</th>
+<th>Mobile Safari</th>
+<th>自带浏览器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iphone4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone5s</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone6</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ipad</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>华为Mate7</td>
+<td>-</td>
+<td>-</td>
+<td>true</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>华为P6</td>
+<td>-</td>
+<td>-</td>
+<td>true</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>小米2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>总结：ios设备不支持mute</p>
+<h2 id="u652F_u6301volume"><a href="#u652F_u6301volume" class="headerlink" title="支持volume"></a>支持volume</h2><table>
+<thead>
+<tr>
+<th>设备</th>
+<th>微信</th>
+<th>手Q</th>
+<th>Mobile Chrome</th>
+<th>Mobile Safari</th>
+<th>自带浏览器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iphone4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone5s</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone6</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ipad</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>华为Mate7</td>
+<td>-</td>
+<td>-</td>
+<td>true</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>华为P6</td>
+<td>-</td>
+<td>-</td>
+<td>true</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>小米2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>总结：ios设备不支持volume</p>
+<h2 id="u652F_u6301playbackRate"><a href="#u652F_u6301playbackRate" class="headerlink" title="支持playbackRate"></a>支持playbackRate</h2><table>
+<thead>
+<tr>
+<th>设备</th>
+<th>微信</th>
+<th>手Q</th>
+<th>Mobile Chrome</th>
+<th>Mobile Safari</th>
+<th>自带浏览器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iphone4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone5s</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone6</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ipad</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>-</td>
+</tr>
+<tr>
+<td>华为Mate7</td>
+<td>-</td>
+<td>-</td>
+<td>true</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>华为P6</td>
+<td>-</td>
+<td>-</td>
+<td>true</td>
+<td>-</td>
+<td>true</td>
+</tr>
+<tr>
+<td>小米2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="u652F_u6301loop"><a href="#u652F_u6301loop" class="headerlink" title="支持loop"></a>支持loop</h2><table>
+<thead>
+<tr>
+<th>设备</th>
+<th>微信</th>
+<th>手Q</th>
+<th>Mobile Chrome</th>
+<th>Mobile Safari</th>
+<th>自带浏览器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iphone4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone5s</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>-</td>
+</tr>
+<tr>
+<td>iphone6</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ipad</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>-</td>
+</tr>
+<tr>
+<td>华为Mate7</td>
+<td>-</td>
+<td>-</td>
+<td>true</td>
+<td>-</td>
+<td>－</td>
+</tr>
+<tr>
+<td>华为P6</td>
+<td>-</td>
+<td>-</td>
+<td>true</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米2</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>小米4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx3</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>魅族mx4</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+        
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/">web终端对html5 video的支持统计</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/">http://zobor.me/2014/10/03/web终端对html5-video的支持统计/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
+
+        
+
+      
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
+    </div>
+    
+
+    
+
+    <footer class="article-footer print-invisible">
+      <a data-url="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/" data-id="cin5t7pdb001ewtj1dm8m7c3y" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/">video</a></li></ul>
+
+    </footer>
+  </div>
+
+  
+</article>
+
+<div class="print-invisible">
+  
+
+</div>
+
+
+    
       <article id="post-杀掉指定端口的node进程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -189,7 +1509,7 @@ ga('send', 'pageview');
     <div class="article-entry" itemprop="articleBody">
       
       
-        <p><img src="http://imglf0.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1NFlhSUM4YmxSQitFUzJuTEJxb0lyN05WcngyR0NyZkd3PT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"></p>
+        <p><img src="https://nodeblog.files.wordpress.com/2011/07/grid.png" alt=""></p>
 <p>通常有多个node进程运行时，需要停掉其中一个，这段代码应该可以帮助你。</p>
 <pre><code class="shell">#!/bin/bash
 if [[ $1 = &quot;&quot; ]];then
@@ -288,12 +1608,167 @@ hr.eof:after {
     
 
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2014/09/03/杀掉指定端口的node进程/" data-id="cin5j9mka000nz4j1tboco412" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2014/09/03/杀掉指定端口的node进程/" data-id="cin5t7pd1000twtj1muom76ww" class="article-share-link">Share</a>
       
         <a href="http://zobor.me/2014/09/03/杀掉指定端口的node进程/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+
+  
+</article>
+
+<div class="print-invisible">
+  
+
+</div>
+
+
+    
+      <article id="post-Google搜索秘籍" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/03/11/Google搜索秘籍/">Google搜索秘籍</a>
+    </h1>
+  
+
+        
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+    <time datetime="2014-03-11T11:23:44.000Z" itemprop="datePublished">2014-03-11</time>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/电脑科学技术/">电脑科学技术</a>
+  </div>
+
+          
+
+          
+        </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <pre><code class="prettyprint">// add host
+127.0.0.1 baidu.com
+</code></pre>
+<h2 id="u9AD8_u7EA7_u641C_u7D22"><a href="#u9AD8_u7EA7_u641C_u7D22" class="headerlink" title="高级搜索"></a>高级搜索</h2><ul>
+<li>site 表示搜索结果局限于某个具体网站或者网站频道，如163.com，或者是某个域名，如com.cn、com等等。</li>
+<li>link 语法返回所有链接到某个URL地址的网页</li>
+<li>inurl 语法返回的网页链接中包含第一个关键字，后面的关键字则出现在链接中或者网页文档中。</li>
+<li>allinurl 语法返回的网页的链接中包含所有查询关键字。这个查询的对象只集中于网页的链接字符串。</li>
+<li>allintitle和intitle 的用法类似于上面的allinurl和inurl，只是后者对URL进行查询，而前者对网页的标题栏进行查询。</li>
+<li>related related用来搜索结构内容方面相似的网页</li>
+<li>cache 用来搜索GOOGLE服务器上某页面的缓存</li>
+<li>info 用来显示与某链接相关的一系列搜索，提供cache、link、related和完全包含该链接的网页的功能</li>
+</ul>
+<h2 id="u4EE5_u4E0B_u662F_u5B9E_u4F8B"><a href="#u4EE5_u4E0B_u662F_u5B9E_u4F8B" class="headerlink" title="以下是实例"></a>以下是实例</h2><h3 id="1-_u6570_u503C_u8303_u56F4_uFF1A"><a href="#1-_u6570_u503C_u8303_u56F4_uFF1A" class="headerlink" title="1.数值范围："></a>1.数值范围：</h3><p>例如：在豆瓣上查找读过1000本书以上的人<br>1000.. 本读过 inurl:people  site:douban.com<br>1000.. 人评价 inurl:subject site:book.douban.com</p>
+<h3 id="2-_u6587_u4EF6_u67E5_u627E_uFF1A"><a href="#2-_u6587_u4EF6_u67E5_u627E_uFF1A" class="headerlink" title="2.文件查找："></a>2.文件查找：</h3><p>例如：查找网上facebook的jpg图片<br>facebook filetype:jpg<br>例如：查找关于javascript的PDF格式的电子书<br>intitle:javascript filetype:PDF<br>例如：在新浪爱问共享资料里面查找《精通javascript》的书籍<br>intitle:精通javascript site:sina.com.cn</p>
+<h3 id="3-_u53CD_u5411_u94FE_u63A5_u67E5_u8BE2"><a href="#3-_u53CD_u5411_u94FE_u63A5_u67E5_u8BE2" class="headerlink" title="3.反向链接查询"></a>3.反向链接查询</h3><p>搜索所有含指向华军软件园bbs.hgdonline.net链接的网页。<br>link:bbs.hgdonline.net</p>
+
+        
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2014/03/11/Google搜索秘籍/">Google搜索秘籍</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2014/03/11/Google搜索秘籍/">http://zobor.me/2014/03/11/Google搜索秘籍/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
+
+        
+
+      
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
+    </div>
+    
+
+    
+
+    <footer class="article-footer print-invisible">
+      <a data-url="http://zobor.me/2014/03/11/Google搜索秘籍/" data-id="cin5t7pdm002dwtj1nb7o5owt" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2014/03/11/Google搜索秘籍/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li></ul>
 
     </footer>
   </div>
@@ -326,14 +1801,14 @@ hr.eof:after {
             <div class="item-thumbnail">
               <a href="/2016/04/07/xml2json-in-node-or-browser/" class="thumbnail">
   
-    <span style="background-image:url(http://images.cnitblog.com/blog/573806/201402/242047004505006.png)" alt="xml2json in node or browser" class="thumbnail-image"></span>
+    <span style="background-image:url(http://images.cnitblog.com/blog/573806/201402/242047004505006.png)" alt="xml2json in Node.js or browser" class="thumbnail-image"></span>
   
 </a>
             </div>
             
             <div class="item-inner">
               
-              <p class="item-title"><a href="/2016/04/07/xml2json-in-node-or-browser/" class="title">xml2json in node or browser</a></p>
+              <p class="item-title"><a href="/2016/04/07/xml2json-in-node-or-browser/" class="title">xml2json in Node.js or browser</a></p>
               <p class="item-category"><a class="article-category-link" href="/categories/前端开发/">前端开发</a></p>
               <p class="item-date"><time datetime="2016-04-07T11:06:24.000Z" itemprop="datePublished">2016-04-07</time></p>
             </div>
@@ -440,6 +1915,10 @@ hr.eof:after {
         
           <li>
             <a href="http://blog.coolfly.net/">Coolfly</a>
+          </li>
+        
+          <li>
+            <a href="https://www.google.com/intl/zh-CN/analytics/">Google Analytics</a>
           </li>
         
       </ul>
