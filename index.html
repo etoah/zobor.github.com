@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/prettify/tomorrow-night-eighties.css">
-  <script src="http://cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+  <script src="//imgcache.qq.com/tencentvideo_v1/3party/jquery.min.js"></script>
 
   
 <!-- Google Analytics -->
@@ -54,11 +54,15 @@ ga('send', 'pageview');
       <a href="/" id="logo"><span class="site-title">Zobor</span></a>
       <nav id="main-nav">
         
+          <a class="main-nav-link" href="/categories/">Categories</a>
+        
           <a class="main-nav-link" href="/archives/">Archives</a>
         
           <a class="main-nav-link" href="/tags/">Tags</a>
         
           <a class="main-nav-link" href="/about/">About</a>
+        
+          <a class="main-nav-link" href="/favorite/">Favorite</a>
         
       </nav>
       
@@ -77,11 +81,15 @@ ga('send', 'pageview');
     <table class="menu outer">
       <tr>
       
+        <td><a class="main-nav-link" href="/categories/">Categories</a></td>
+      
         <td><a class="main-nav-link" href="/archives/">Archives</a></td>
       
         <td><a class="main-nav-link" href="/tags/">Tags</a></td>
       
         <td><a class="main-nav-link" href="/about/">About</a></td>
+      
+        <td><a class="main-nav-link" href="/favorite/">Favorite</a></td>
       
       <td>
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://zobor.me"></form>
@@ -209,27 +217,101 @@ ga('send', 'pageview');
 </ul>
 
         
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2016/04/07/xml2json-in-node-or-browser/">xml2json in node or browser</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2016/04/07/xml2json-in-node-or-browser/">http://zobor.me/2016/04/07/xml2json-in-node-or-browser/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
 
         
 
       
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
     </div>
     
 
     
 
-    
-
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2016/04/07/xml2json-in-node-or-browser/" data-id="cin5ib064000su4j1qur9dgss" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2016/04/07/xml2json-in-node-or-browser/" data-id="cin5j9mkc000tz4j1n8ihnyxq" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2016/04/07/xml2json-in-node-or-browser/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xml2json/">xml2json</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li></ul>
 
     </footer>
   </div>
+
   
 </article>
+
 <div class="print-invisible">
   
 
@@ -292,27 +374,101 @@ ga('send', 'pageview');
 </ul>
 
         
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/">android系统webview touch的兼容性总结</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/">http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
 
         
 
       
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
     </div>
     
 
     
 
-    
-
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/" data-id="cin5ib06f001mu4j1t9pc1e0b" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/" data-id="cin5j9mko001nz4j1lv3lz9mn" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2016/04/01/android系统webview-touch的兼容性总结/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webview/">webview</a></li></ul>
 
     </footer>
   </div>
+
   
 </article>
+
 <div class="print-invisible">
   
 
@@ -427,27 +583,101 @@ ga('send', 'pageview');
 </table>
 
         
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2016/03/28/腾讯视频HTML5Player快捷键一览表/">腾讯视频 HTML5 Player 快捷键一览表</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2016/03/28/腾讯视频HTML5Player快捷键一览表/">http://zobor.me/2016/03/28/腾讯视频HTML5Player快捷键一览表/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
 
         
 
       
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
     </div>
     
 
     
 
-    
-
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2016/03/28/腾讯视频HTML5Player快捷键一览表/" data-id="cin5ib060000gu4j168i85vb9" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2016/03/28/腾讯视频HTML5Player快捷键一览表/" data-id="cin5j9mk8000hz4j1zaygk5os" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2016/03/28/腾讯视频HTML5Player快捷键一览表/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/腾讯视频/">腾讯视频</a></li></ul>
 
     </footer>
   </div>
+
   
 </article>
+
 <div class="print-invisible">
   
 
@@ -521,27 +751,101 @@ wget --no-check-certificate https://ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz
 brew upgrade lrzsz
 </code></pre>
         
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/">Mac用Homebrew SSL证书错误</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/">http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
 
         
 
       
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
     </div>
     
 
     
 
-    
-
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/" data-id="cin5ib06h001su4j1puxo73kc" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/" data-id="cin5j9mkp001tz4j1mnrfxpnu" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2016/01/12/Mac用Homebrew-SSL证书错误/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/error/">error</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
 
     </footer>
   </div>
+
   
 </article>
+
 <div class="print-invisible">
   
 
@@ -595,27 +899,101 @@ brew upgrade lrzsz
 </code></pre><p>未完待续</p>
 
         
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/">html5 video如何判断直播流结束?</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/">http://zobor.me/2015/11/25/html5-video如何判断直播流结束/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
 
         
 
       
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
     </div>
     
 
     
 
-    
-
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/" data-id="cin5ib06b001du4j1vd0r1zmo" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/" data-id="cin5j9mkl001ez4j10bxa3yqm" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2015/11/25/html5-video如何判断直播流结束/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/">video</a></li></ul>
 
     </footer>
   </div>
+
   
 </article>
+
 <div class="print-invisible">
   
 
@@ -1258,27 +1636,101 @@ class Handlers {
 }
 </code></pre>
         
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2015/06/30/html5开发之fiddler配置总结/">html5开发之fiddler配置总结</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2015/06/30/html5开发之fiddler配置总结/">http://zobor.me/2015/06/30/html5开发之fiddler配置总结/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
 
         
 
       
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
     </div>
     
 
     
 
-    
-
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2015/06/30/html5开发之fiddler配置总结/" data-id="cin5ib0690017u4j15ymtzrbg" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2015/06/30/html5开发之fiddler配置总结/" data-id="cin5j9mkj0018z4j158ylth90" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2015/06/30/html5开发之fiddler配置总结/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fiddler/">fiddler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fiddlerscript/">fiddlerscript</a></li></ul>
 
     </footer>
   </div>
+
   
 </article>
+
 <div class="print-invisible">
   
 
@@ -1341,27 +1793,201 @@ class Handlers {
 </ul>
 
         
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2015/06/17/说说safari的onprogress/">说说safari的video onprogress</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2015/06/17/说说safari的onprogress/">http://zobor.me/2015/06/17/说说safari的onprogress/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
 
         
 
       
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
     </div>
     
 
     
 
-    
-
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2015/06/17/说说safari的onprogress/" data-id="cin5ib05u0005u4j183p00shw" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2015/06/17/说说safari的onprogress/" data-id="cin5j9mk20006z4j16s1363to" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2015/06/17/说说safari的onprogress/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/safari/">safari</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/">video</a></li></ul>
 
     </footer>
   </div>
+
   
 </article>
+
+<div class="print-invisible">
+  
+
+</div>
+
+
+    
+      <article id="post-hello-zobor" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/30/hello-zobor/">hello zobor</a>
+    </h1>
+  
+
+        
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+    <time datetime="2015-05-30T05:19:00.000Z" itemprop="datePublished">2015-05-30</time>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/扯淡/">扯淡</a>
+  </div>
+
+          
+
+          
+        </div>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+        <p><img src="/images/hello.jpg" alt="hello"><br>自勉！！</p>
+
+        
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2015/05/30/hello-zobor/">hello zobor</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2015/05/30/hello-zobor/">http://zobor.me/2015/05/30/hello-zobor/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
+
+        
+
+      
+      
+    </div>
+    
+
+    
+
+    <footer class="article-footer print-invisible">
+      <a data-url="http://zobor.me/2015/05/30/hello-zobor/" data-id="cin5j9mkm001iz4j1pavp9uif" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
+
+    </footer>
+  </div>
+
+  
+</article>
+
 <div class="print-invisible">
   
 
@@ -1465,27 +2091,101 @@ class Handlers {
 </ul>
 
         
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2014/12/14/web设备UA统计/">web设备UA统计</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2014/12/14/web设备UA统计/">http://zobor.me/2014/12/14/web设备UA统计/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
 
         
 
       
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
     </div>
     
 
     
 
-    
-
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2014/12/14/web设备UA统计/" data-id="cin5ib0660010u4j1lihxuh3m" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2014/12/14/web设备UA统计/" data-id="cin5j9mke0011z4j1q26fzhfl" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2014/12/14/web设备UA统计/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
 
     </footer>
   </div>
+
   
 </article>
+
 <div class="print-invisible">
   
 
@@ -2146,107 +2846,101 @@ class Handlers {
 </table>
 
         
+<div class="copyright" style="margin-bottom:10px; margin-top:30px;">
+  <strong>本文标题: </strong><a href="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/">web终端对html5 video的支持统计</a> </br>
+  <strong>本文链接: </strong><a href="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/">http://zobor.me/2014/10/03/web终端对html5-video的支持统计/</a> </br>
+  <strong>版权声明: </strong>本博客所有文章除特别声明外，均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank"> CC BY-NC-SA 3.0 CN </a>许可协议进行许可。
+  非商业转载请注明作者及出处。商业转载请联系作者本人。<br>
+</div>
+
+        
+<div id="eof" class="print-invisible">
+  <hr class="eof">
+</div>
+
+<style type="text/css">
+hr.eof {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+hr.eof:after {
+  content: 'EOF';
+  display: inline-block;
+  position: relative;
+  top: -13px;
+  padding: 0 10px;
+  background: #fff;
+  color: #8c8b8b;
+}
+</style>
+
 
         
 
       
+      
+<div class ="post-donate" style="text-align:center;margin-top:30px;">
+  <style type="text/css">.donate_hide{display:none !important;}</style>
+  <div id="donate_board" class="donate_bar">
+    <a id="btn_donate" href="javascript:;" title="Donate 打赏" style="background:url(/images/reward.jpg) no-repeat;display:inline-block;width: 82px;
+    height: 82px;"></a>
+    <div class="donate_txt">
+       <div>&uarr;</div>
+       <div>赏杯咖啡</div>
+    </div>
+    <br>
+  </div>  
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/alipay.jpg" title="支付宝打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/alipay.jpg" title="支付宝打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+
+  
+  <div class="donate_guide donate_hide" style="display:inline-block;">
+      <a href="/images/wechat.jpg" title="微信打赏" class="fancybox" rel="article0" style="margin-right:2px;">
+      <img src="/images/wechat.jpg" title="微信打赏" height="164px" width="164px">
+      </a> 
+  </div>
+  
+
+  <script type="text/javascript">
+    document.getElementById('btn_donate').onclick = function(){
+      $('#donate_board').addClass('donate_hide');
+      $('.donate_guide').removeClass('donate_hide');
+    }
+  </script>
+</div>
+
+
     </div>
     
 
     
 
-    
-
     <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/" data-id="cin5ib0670013u4j1bvoerjl5" class="article-share-link">Share</a>
+      <a data-url="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/" data-id="cin5j9mkh0014z4j1eyhzn4yw" class="article-share-link">Share</a>
+      
+        <a href="http://zobor.me/2014/10/03/web终端对html5-video的支持统计/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/">video</a></li></ul>
 
     </footer>
   </div>
+
   
 </article>
-<div class="print-invisible">
-  
 
-</div>
-
-
-    
-      <article id="post-杀掉指定端口的node进程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/03/杀掉指定端口的node进程/">杀掉指定端口的node进程</a>
-    </h1>
-  
-
-        
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-    <time datetime="2014-09-03T09:40:33.000Z" itemprop="datePublished">2014-09-03</time>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/前端开发/">前端开发</a>
-  </div>
-
-          
-
-          
-        </div>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-        <p><img src="http://imglf0.nosdn.127.net/img/SW5VVnJZRTBwMm5hWXBLQXJ2d1M1NFlhSUM4YmxSQitFUzJuTEJxb0lyN05WcngyR0NyZkd3PT0.png?imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="img"></p>
-<p>通常有多个node进程运行时，需要停掉其中一个，这段代码应该可以帮助你。</p>
-<pre><code class="shell">#!/bin/bash
-if [[ $1 = &quot;&quot; ]];then
-    echo &quot;Usage: $0 port&quot;
-    exit 8
-fi
-id=$(netstat -nutlp | grep $1 | awk -F&#39;[ /]+&#39; &#39;{print $7}&#39;)
-prog=$(netstat -nutlp | grep $1 | awk -F&#39;[ /]+&#39; &#39;{print $8}&#39;)
-if [ $prog = &quot;node&quot; ];then
-    kill $id &amp;&amp; echo &quot;stop node is successfully.&quot;
-else
-    echo &quot;not found node process.&quot;
-fi
-</code></pre>
-
-        
-
-        
-
-      
-    </div>
-    
-
-    
-
-    
-
-    <footer class="article-footer print-invisible">
-      <a data-url="http://zobor.me/2014/09/03/杀掉指定端口的node进程/" data-id="cin5ib063000mu4j16jxd99nd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
 <div class="print-invisible">
   
 
@@ -2363,24 +3057,6 @@ fi
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端开发/">前端开发</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/扯淡/">扯淡</a><span class="category-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-  
-    
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">links</h3>
     <div class="widget">
@@ -2426,6 +3102,18 @@ fi
   </div>
 </footer>
     
+
+<script>
+  var disqus_shortname = 'zoborzhang';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + 'a.disquscdn.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
 
 
 <script async="async" src="//dn-lbstatics.qbox.me/lbservice/busuanzi/2.0/busuanzi.mini.js"></script>
